@@ -93,9 +93,11 @@
   <ItemGroup>
     <Content Include="Content\ui-bootstrap-csp.css" />
     <Content Include="Global.asax" />
+    <Content Include="packages.config" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-sanitize.js" />
     <Content Include="Scripts\angular-sanitize.min.js" />
+    <Content Include="Scripts\angular-sanitize.min.js.map" />
     <Content Include="Scripts\angular-ui-router.js" />
     <Content Include="Scripts\angular-ui-router.min.js" />
     <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.js" />
@@ -104,9 +106,11 @@
     <Content Include="Scripts\angular-ui\ui-bootstrap.min.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
-    <None Include="Scripts\jquery-1.11.3.intellisense.js" />
+    <Content Include="Scripts\angular.min.js.map" />
     <Content Include="Scripts\jquery-1.11.3.js" />
     <Content Include="Scripts\jquery-1.11.3.min.js" />
+    <Content Include="Scripts\jquery-1.11.3.min.map" />
+    <Content Include="Views\web.config" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -117,11 +121,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\web.config" />
-    <Content Include="packages.config" />
-    <Content Include="Scripts\angular.min.js.map" />
-    <Content Include="Scripts\angular-sanitize.min.js.map" />
-    <Content Include="Scripts\jquery-1.11.3.min.map" />
+    <None Include="Scripts\jquery-1.11.3.intellisense.js" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -146,7 +146,9 @@
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\ui-router-extras\ui-router-extras.d.ts" />
     <TypeScriptCompile Include="Templates\controller\defaultController.ts" />
-    <TypeScriptCompile Include="Templates\controller\modalController.ts" />
+    <TypeScriptCompile Include="Templates\controller\modalController.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="Templates\directives\controllerAsDirective.ts" />
     <TypeScriptCompile Include="Templates\directives\scopeDirective.ts" />
     <TypeScriptCompile Include="Templates\mainApp.ts" />
