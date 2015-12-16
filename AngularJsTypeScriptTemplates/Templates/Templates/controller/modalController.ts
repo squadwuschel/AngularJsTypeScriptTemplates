@@ -3,23 +3,14 @@
     //import My = Sq.Internal...;
 
     export interface IMyModalCtrl {
-        locals: MyLocalsModel;
         init(): void;
         save(): void;
         cancel(): void;
     }
 
-    export class MyLocalsModel {
-        isSaving: boolean = false;
-        isEditMode: boolean;
-        hasError: boolean = false;
-        wasSubmitted: boolean = false;
-        errorMessage: string = "Es ist ein Fehler aufgetreten";
-    }
-
     export class MyModalCtrl implements IMyModalCtrl {
         //viewModel: My.IAddOrEditTreeNodeViewModel;
-        locals: MyLocalsModel;
+        private locals: MyLocalsModel;
         frm: ng.IFormController;
         //Injection für den Konstruktor - Achtung Reihenfolge wichtig!
         static $inject = [
@@ -77,5 +68,13 @@
             return this._module;
         }
         //#endregion
+    }
+
+    class MyLocalsModel {
+        isSaving: boolean = false;
+        isEditMode: boolean;
+        hasError: boolean = false;
+        wasSubmitted: boolean = false;
+        errorMessage: string = "Es ist ein Fehler aufgetreten";
     }
 } 

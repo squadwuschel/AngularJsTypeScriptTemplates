@@ -6,17 +6,13 @@
     export interface ICtrlNameCtrl {
         //Locals
         //viewModel: My.;
-        locals: CtrlNameLocalsModel;
         //Functions
         init(): void;
     }
 
-    export class CtrlNameLocalsModel {
-    }
-
     //Unsere CtrlName Klasse erstellen
     export class CtrlNameCtrl implements ICtrlNameCtrl {
-        locals: CtrlNameLocalsModel = new CtrlNameLocalsModel();
+        private  locals: CtrlNameLocalsModel = new CtrlNameLocalsModel();
         static $inject = [
         ];
 
@@ -49,5 +45,8 @@
             return this._module;
         }
         //#endregion
+    }
+
+    class CtrlNameLocalsModel {
     }
 } 
