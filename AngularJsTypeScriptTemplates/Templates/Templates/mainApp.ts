@@ -10,6 +10,7 @@
                     "xyz.directives",
                     //Module die mit TypeScript geschrieben wurden einbinden
                     //Views.MainAppCtrl.module.name,
+                    App.Views.Ordner.CtrlNameCtrl.module.name,
                 ])
                 .config([
                     "$stateProvider", "$urlRouterProvider", "$locationProvider", ($stateProvider: ng.ui.IStateProvider, $urlRouterProvider: ng.ui.IUrlRouterProvider, $locationProvider: ng.ILocationProvider) => {
