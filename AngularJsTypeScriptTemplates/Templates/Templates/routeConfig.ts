@@ -5,10 +5,10 @@
      */
     export class RouteConfig {
         constructor(private $stateProvider: ng.ui.IStateProvider, private $urlRouterProvider: ng.ui.IUrlRouterProvider, private $locationProvider: ng.ILocationProvider) {
-            this.Init();
+            this.init();
         }
 
-        private Init(): void {
+        private init(): void {
             //$urlRouterProvider.when('/Home', '/home/index');
             this.$urlRouterProvider.otherwise("Todo/Overview");
             //$locationProvider.html5Mode(true);

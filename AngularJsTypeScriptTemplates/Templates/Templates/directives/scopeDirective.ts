@@ -32,7 +32,6 @@
 
         //#region Angular Module Definition
         private static _module: ng.IModule;
-
         /**
         * Stellt die Angular Module für DirectiveName bereit.
         */

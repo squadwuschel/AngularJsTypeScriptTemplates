@@ -1,0 +1,56 @@
+﻿@{
+    Layout = null;
+}
+@* Modal Template *@
+@* Controller: TodoModalCtrl as ctrl *@
+<div class="modal-header">
+    <div class="row">
+        <div class="col-md-12" style="margin-top: 5px;">
+            <strong>
+              Modal Name
+            </strong>
+        </div>
+    </div>
+</div>
+<form name="ctrl.frm" ng-submit="ctrl.save()" novalidate>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-horizontal">
+                    <div class="form-group" ng-class="{'has-error': ctrl.frm.beschreibung.$invalid && ctrl.locals.wasSubmitted }">
+                        <label class="col-md-3 control-label">
+                            Beschreibung*
+                        </label>
+                        <div class="col-md-9">
+                            <input ng-model="ctrl.viewModel.Beschreibung" name="beschreibung" type="text" required maxlength="200" class="form-control input-sm" placeholder="Beschreibung eingeben"/>
+                            <label class="control-label text-danger small" ng-if="ctrl.frm.beschreibung.$invalid && ctrl.locals.wasSubmitted">
+                                Es muss eine Beschreibung eingeben werden.
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" ng-if="ctrl.locals.hasError">
+            <div class="col-md-12  small">
+                <div class="alert alert-danger" style="margin-bottom: 0" role="alert"><strong ng-bind="ctrl.locals.errorMessage"></strong>
+                </div>
+            </div>
+        </div>
+        @*<pre>{{ctrl.viewModel | json}}</pre>*@
+    </div>
+    <div class="modal-footer">
+        <div class="row">
+            <div class="col-md-2">
+                <a ng-if="!ctrl.locals.isSaving" ng-click="ctrl.cancel()" title="Abbrechen" href="" class="btn btn-default btn-block">
+                    Abbrechen
+                </a>
+            </div>
+            <div class="col-md-4 col-md-offset-6">
+                <button type="submit" ng-if="!ctrl.locals.isSaving" ng-click="ctrl.save()" href="" class="btn btn-block btn-primary pull-right">
+                    Speichern
+                </button>
+            </div>
+        </div>
+    </div>
+</form>

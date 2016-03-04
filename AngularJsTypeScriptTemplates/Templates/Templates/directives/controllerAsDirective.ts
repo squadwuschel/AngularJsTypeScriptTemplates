@@ -57,9 +57,6 @@
 
         //static $inject = [];
 
-        /* 
-			* Da wir die CSS Klassen für einen Provider setzen, hier den passenden Provider injecten und im Template dann auf dessen Config Werte zugreifen.
-			*/
         constructor() {
             this.init();
         }
@@ -67,8 +64,8 @@
         init(): void { }
 
         /*
-			* Eine Funktion die z.B: über ein btn Click des Templates aufgerufen werden kann
-			*/
+		* Eine Funktion die z.B: über ein btn Click des Templates aufgerufen werden kann
+		*/
         public doSomethingBtnClick(): void {
             //Zugriff auf die "Scope" Variable mit "this"
             this.sqTitle = "Blubb";

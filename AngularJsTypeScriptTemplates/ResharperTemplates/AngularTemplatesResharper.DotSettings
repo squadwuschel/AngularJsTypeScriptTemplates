@@ -306,7 +306,7 @@ interface Window {&#xD;
         constructor(&#xD;
 			private $modalInstance: ng.ui.bootstrap.IModalServiceInstance,&#xD;
 			private $ServiceName$: Services.$ServiceInterface$, &#xD;
-			private messageFactory: Sxp.IMessageFactory) {&#xD;
+			private messageFactory: Sq.IMessageFactory) {&#xD;
 		    this.locals = new $ControllerName$LocalsModel();&#xD;
             this.init();&#xD;
         }&#xD;

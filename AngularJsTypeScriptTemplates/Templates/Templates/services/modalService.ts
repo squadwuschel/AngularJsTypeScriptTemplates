@@ -7,6 +7,7 @@
     }
 
     /**
+     * Ui-Bootstrap Modals verwenden!
      * Ein ModalService erstellen über die man auf alle Modals in der Anwendung zugreifen kann.
      * Quelle:
      * http://www.ngroutes.com/questions/AUuAClOCa5vEqxqlK2UN/how-to-use-angular-ui-bootstrap-modals-in-typescript.html
@@ -26,7 +27,6 @@
                 //Controller As Syntax für Modal Controller
                 controller: App.Views.Ordner.CtrlNameCtrl.module.name + ' as nameCtrl',
                 size: 'lg',
-                //windowClass: 'custom-modal-xl', //Damit können wir ein extra breites Modal erstellen - CSS Klasse muss aber existieren keine Standard Bootstrap Klasse!
                 backdrop: "static",
                 resolve: {
                     todoId: () => id
