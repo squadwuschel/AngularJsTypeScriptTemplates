@@ -13,7 +13,7 @@
      * http://www.ngroutes.com/questions/AUuAClOCa5vEqxqlK2UN/how-to-use-angular-ui-bootstrap-modals-in-typescript.html
      */
     export class ModalService implements IModalService {
-        static $inject = ['$modal', "$q"];
+        static $inject : string[] = ['$modal', "$q"];
 
         constructor(private $modal: ng.ui.bootstrap.IModalService, private $q: ng.IQService) {}
 

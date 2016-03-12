@@ -13,7 +13,7 @@
     //Unsere CtrlName Klasse erstellen
     export class TodoCtrl implements ITodoCtrl {
         private locals: CtrlNameLocalsModel = new CtrlNameLocalsModel();
-        static $inject = [
+        static $inject: string[] = [
             App.Services.TodoService.module.name,
             App.Services.ModalService.module.name,
         ];

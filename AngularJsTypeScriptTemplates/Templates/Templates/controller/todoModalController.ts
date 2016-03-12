@@ -13,7 +13,7 @@
         private locals: MyLocalsModel;
         frm: ng.IFormController;
         //Injection für den Konstruktor - Achtung Reihenfolge wichtig!
-        static $inject = [
+        static $inject: string[] = [
             "$modalInstance",
             Services.TodoService.module.name,
              "personId"

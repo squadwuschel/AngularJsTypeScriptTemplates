@@ -13,12 +13,12 @@
     export class TodoService implements ITodoService {
         private persons : App.Person[] = [];
 
-        static $inject = [];
+        static $inject: string[] = [];
 
         constructor() {
             this.persons.push(new App.Person("SquadWuschel", 34, 1337));
             this.persons.push(new App.Person("Squadinator", 33, 7331));
-            this.persons.push(new App.Person("SquadLeader", 35, 3173));
+            this.persons.push(new App.Person("SquadLeader", 3232312123.4454545, 3173));
         }
 
         public getPersonList(): App.Person[] {
