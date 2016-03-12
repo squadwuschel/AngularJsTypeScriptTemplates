@@ -1,9 +1,9 @@
-﻿module App.Views.Shared {
+﻿module App.Services {
     //Den NS importieren für unsere Interfaces aus .NET die vom TypeLite.tt erstellt wurden.
     //import My = MvcTypeScript.Models;
 
-    export interface IModalServiceNameService {
-        editTodoItem(id: Number): ng.IPromise<string>;
+    export interface IModalService {
+        editPerson(personId: Number): ng.IPromise<string>;
     }
 
     /**
@@ -12,24 +12,24 @@
      * Quelle:
      * http://www.ngroutes.com/questions/AUuAClOCa5vEqxqlK2UN/how-to-use-angular-ui-bootstrap-modals-in-typescript.html
      */
-    export class ModalServiceNameService implements IModalServiceNameService {
+    export class ModalService implements IModalService {
         static $inject = ['$modal', "$q"];
 
         constructor(private $modal: ng.ui.bootstrap.IModalService, private $q: ng.IQService) {}
 
         /**
-         * Bearbeiten eines TodoItems, dem die passende TodoId Übergeben wird und ein Modal zum Bearbeiten öffnet.
-         * @param id Die Id des TodoItems welches Bearbeitet werden soll.
+         * Bearbeiten einer Person, dem die passende PersonId Übergeben wird und ein Modal zum Bearbeiten öffnet.
+         * @param id Die Id der Person welche Bearbeitet werden soll.
          */
-        public editTodoItem(id: Number): ng.IPromise<string> {
+        public editPerson(personId: Number): ng.IPromise<string> {
             var options: ng.ui.bootstrap.IModalSettings = {
                 templateUrl: '/Todo/TodoEditModal',
                 //Controller As Syntax für Modal Controller
-                controller: App.Views.Ordner.CtrlNameCtrl.module.name + ' as nameCtrl',
+                controller: App.Controller.TodoModalCtrl.module.name + ' as ctrl',
                 size: 'lg',
                 backdrop: "static",
                 resolve: {
-                    todoId: () => id
+                    personId: () => personId
                 }
             };
 
@@ -53,8 +53,8 @@
 
             //Hier die abhängigen Module für diesen controller definieren, damit brauchen wir von Außen nur den Controller einbinden
             //und müssen seine Abhängkeiten nicht wissen.
-            this._module = angular.module('ModalServiceNameService', ["ui.bootstrap"]);
-            this._module.service('ModalServiceNameService', ModalServiceNameService);
+            this._module = angular.module('ModalService', ["ui.bootstrap"]);
+            this._module.service('ModalService', ModalService);
             return this._module;
         }
         //#endregion

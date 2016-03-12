@@ -20,7 +20,7 @@
         
         }
 
-        //constructor(private xyzDataService: IxyzDataService, private abcConfig: IabcServiceProvider) {
+       //constructor(private xyzDataService: IxyzDataService, private abcConfig: IabcServiceProvider) {
         //}
 
         constructor() {
@@ -29,6 +29,10 @@
         public link = ($scope: IDirectiveNameScope, element: JQuery, attr: ng.IAttributes) => {
 
         }
+
+        public controller = ['$scope', ($scope: IDirectiveNameScope) => {
+
+        }];
 
         //#region Angular Module Definition
         private static _module: ng.IModule;
@@ -43,7 +47,7 @@
             //Hier die abhängigen Module für unsere Direktive definieren.
             this._module = angular.module('directiveModuleName.directives', []);
             //this._module.directive('DirectiveName', [(xyzDataService: IxyzDataService, abcConfig: IabcServiceProvider) => { return new DirectiveName(xyzDataService, abcConfig); }]);
-            this._module.directive('DirectiveName', [() => { return new DirectiveName(); }]);
+            this._module.directive('directiveName', [() => { return new DirectiveName(); }]);
             return this._module;
         }
         //#endregion

@@ -1,4 +1,4 @@
-﻿module App.Views.Shared.Custom {
+﻿module App.Services {
 
     /*
      * Configklasse für einen Service. Hier kann man z.B. die passenden Css Klassen ändern die gesetzt werden.
@@ -6,7 +6,7 @@
     export class ProviderNameServiceProvider implements ng.IServiceProvider, IProviderNameServiceProvider {
         //Die Konfigurationsdaten entsprechend setzen.
         config: IProviderNameConfig = {
-            //customCssClassName: "sq-drag",
+            customCssClassName: "sq-drag"
 
         }
 
@@ -18,7 +18,6 @@
 
         //#region Angular Module Definition
         private static _module: ng.IModule;
-
         /**
         * Stellt die Angular Module für providerModuleName bereit.
         */
@@ -40,6 +39,6 @@
     }
 
     export interface IProviderNameConfig {
-        //customCssClassName: string;
+        customCssClassName: string;
     }
 }

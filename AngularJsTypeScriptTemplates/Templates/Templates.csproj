@@ -125,6 +125,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\TodoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -139,6 +140,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Todo\TodoEditModal.cshtml" />
+    <Content Include="Views\Todo\TodoList.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -147,10 +149,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="Scripts\MyClasses\person.ts" />
     <TypeScriptCompile Include="Scripts\typings\angular-ui-bootstrap\angular-ui-bootstrap.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angular-ui-router\angular-ui-router.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
@@ -162,8 +164,8 @@
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\ui-router-extras\ui-router-extras.d.ts" />
-    <TypeScriptCompile Include="Templates\controller\defaultController.ts" />
-    <TypeScriptCompile Include="Templates\controller\modalController.ts">
+    <TypeScriptCompile Include="Templates\controller\todoController.ts" />
+    <TypeScriptCompile Include="Templates\controller\todoModalController.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="Templates\directives\controllerAsDirective.ts" />
@@ -171,7 +173,7 @@
     <TypeScriptCompile Include="Templates\mainApp.ts" />
     <TypeScriptCompile Include="Templates\routeConfig.ts" />
     <TypeScriptCompile Include="Templates\services\modalService.ts" />
-    <TypeScriptCompile Include="Templates\services\service.ts" />
+    <TypeScriptCompile Include="Templates\services\todoService.ts" />
     <TypeScriptCompile Include="Templates\services\serviceProvider.ts" />
   </ItemGroup>
   <ItemGroup>

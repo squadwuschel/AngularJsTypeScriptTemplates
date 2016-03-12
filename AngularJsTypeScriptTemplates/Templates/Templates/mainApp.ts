@@ -3,20 +3,22 @@
         static createApp(angular: ng.IAngularStatic) {
             //Alle Module definieren die wir verwenden.
             angular.module("app.main", [
-                    //Fremdanbieter Module
-                    "ui.router",
-                    "ui.bootstrap",
-                    //Eigene Module einbinden
-                    "xyz.directives",
-                    //Module die mit TypeScript geschrieben wurden einbinden
-                    //Views.MainAppCtrl.module.name,
-                    App.Views.Ordner.CtrlNameCtrl.module.name,
-                ])
-                .config([
-                    "$stateProvider", "$urlRouterProvider", "$locationProvider", ($stateProvider: ng.ui.IStateProvider, $urlRouterProvider: ng.ui.IUrlRouterProvider, $locationProvider: ng.ILocationProvider) => {
-                        return new Config.RouteConfig($stateProvider, $urlRouterProvider, $locationProvider);
-                    }
-                ]);
+                //Fremdanbieter Module
+                "ui.router",
+                "ui.bootstrap",
+                //Module die mit TypeScript geschrieben wurden einbinden
+                App.Controller.TodoModalCtrl.module.name,
+                App.Controller.TodoCtrl.module.name,
+                App.Services.TodoService.module.name,
+                App.Services.ModalService.module.name,
+                App.Directives.CtrlAsDirectiveName.module.name,
+                App.Directives.DirectiveName.module.name,
+            ])
+            .config([
+                "$stateProvider", "$urlRouterProvider", "$locationProvider", ($stateProvider: ng.ui.IStateProvider, $urlRouterProvider: ng.ui.IUrlRouterProvider, $locationProvider: ng.ILocationProvider) => {
+                    return new Config.RouteConfig($stateProvider, $urlRouterProvider, $locationProvider);
+                }
+            ]);
         }
     }
 }

@@ -7,7 +7,7 @@
     <div class="row">
         <div class="col-md-12" style="margin-top: 5px;">
             <strong>
-              Modal Name
+              Person
             </strong>
         </div>
     </div>
@@ -17,14 +17,27 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="form-horizontal">
-                    <div class="form-group" ng-class="{'has-error': ctrl.frm.beschreibung.$invalid && ctrl.locals.wasSubmitted }">
+                    <div class="form-group" ng-class="{'has-error': ctrl.frm.name.$invalid && ctrl.locals.wasSubmitted }">
                         <label class="col-md-3 control-label">
-                            Beschreibung*
+                            Name*
                         </label>
                         <div class="col-md-9">
-                            <input ng-model="ctrl.viewModel.Beschreibung" name="beschreibung" type="text" required maxlength="200" class="form-control input-sm" placeholder="Beschreibung eingeben"/>
-                            <label class="control-label text-danger small" ng-if="ctrl.frm.beschreibung.$invalid && ctrl.locals.wasSubmitted">
-                                Es muss eine Beschreibung eingeben werden.
+                            <input ng-model="ctrl.locals.person.name" name="name" type="text" required maxlength="200" class="form-control input-sm" placeholder="Name eingeben"/>
+                            <label class="control-label text-danger small" ng-if="ctrl.frm.name.$invalid && ctrl.locals.wasSubmitted">
+                                Es muss ein Name eingeben werden.
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group" ng-class="{'has-error': ctrl.frm.age.$invalid && ctrl.locals.wasSubmitted }">
+                        <label class="col-md-3 control-label">
+                            Alter*
+                        </label>
+                        <div class="col-md-9">
+                            <input ng-model="ctrl.locals.person.age" name="age" type="text" required maxlength="2" class="form-control input-sm" placeholder="Alter eingeben"/>
+                            <label class="control-label text-danger small" ng-if="ctrl.frm.age.$invalid && ctrl.locals.wasSubmitted">
+                                Es muss ein Alter eingeben werden.
                             </label>
                         </div>
                     </div>
@@ -33,7 +46,8 @@
         </div>
         <div class="row" ng-if="ctrl.locals.hasError">
             <div class="col-md-12  small">
-                <div class="alert alert-danger" style="margin-bottom: 0" role="alert"><strong ng-bind="ctrl.locals.errorMessage"></strong>
+                <div class="alert alert-danger" style="margin-bottom: 0" role="alert">
+                    <strong ng-bind="ctrl.locals.errorMessage"></strong>
                 </div>
             </div>
         </div>

@@ -48,9 +48,9 @@
             }
 
             //Hier die abhängigen Module für unsere Direktive definieren.
-            this._module = angular.module('CtrlAsDirectiveName', []);
+            this._module = angular.module('ctrlAsDirectiveName', []);
             //this._module.directive('CtrlAsDirectiveName', ["$interval", ($interval: angular.IIntervalService) => { return new CtrlAsDirectiveName($interval); }]);
-            this._module.directive('CtrlAsDirectiveName', [() => { return new CtrlAsDirectiveName(); }]);
+            this._module.directive('ctrlAsDirectiveName', [() => { return new CtrlAsDirectiveName(); }]);
             return this._module;
         }
         //#endregion

@@ -10,22 +10,18 @@
 
         private init(): void {
             //$urlRouterProvider.when('/Home', '/home/index');
-            this.$urlRouterProvider.otherwise("Todo/Overview");
+            this.$urlRouterProvider.otherwise("Todo");
             //$locationProvider.html5Mode(true);
 
             //Definieren der Routen die in unserer App zur Verfügung stehen.
             this.$stateProvider
                 .state("Todo", {
                     url: "/Todo",
-                    templateUrl: "Todo/TodoOverview"
+                    templateUrl: "Todo/TodoList"
                 })
                 .state("Todo.Overview", {
                     url: "/Overview",
                     templateUrl: "Todo/TodoOverview"
-                })
-                .state("Home", {
-                    url: "/Home",
-                    templateUrl: "Home/Index"
                 });
         }
     }

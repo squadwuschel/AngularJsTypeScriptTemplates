@@ -1,12 +1,11 @@
 ﻿<!DOCTYPE html>
-<html>
+<html ng-app="app.main">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script src="~/Scripts/modernizr-2.6.2.js"></script>
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -17,7 +16,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Application name", "TodoList", "Todo", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -28,13 +27,21 @@
 
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
     </div>
 
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/MyClasses/person.js"></script>
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/angular-ui/ui-bootstrap-tpls.js"></script>
+    <script src="~/Scripts/angular-ui-router.js"></script>
+    <script src="~/Scripts/angular-sanitize.js"></script>
+    <script src="~/Templates/services/todoService.js"></script>
+    <script src="~/Templates/services/modalService.js"></script>
+    <script src="~/Templates/controller/todoController.js"></script>
+    <script src="~/Templates/controller/todoModalController.js"></script>
+    <script src="~/Templates/directives/controllerAsDirective.js"></script>
+    <script src="~/Templates/directives/scopeDirective.js"></script>
+    <script src="~/Templates/routeConfig.js"></script>
+    <script src="~/Templates/mainApp.js"></script>
 </body>
 </html>

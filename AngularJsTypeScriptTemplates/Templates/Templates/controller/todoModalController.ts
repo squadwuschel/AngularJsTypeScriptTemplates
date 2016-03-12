@@ -1,27 +1,28 @@
-﻿module App.Views.Ordner {
+﻿module App.Controller {
     //Den NS importieren für unsere Interfaces aus .NET die vom TypeLite.tt erstellt wurden.
     //import My = Sq.Internal...;
 
-    export interface IMyModalCtrl {
+    export interface ITodoModalCtrl {
         init(): void;
         save(): void;
         cancel(): void;
     }
 
-    export class MyModalCtrl implements IMyModalCtrl {
+    export class TodoModalCtrl implements ITodoModalCtrl {
         //viewModel: My.IAddOrEditTreeNodeViewModel;
         private locals: MyLocalsModel;
         frm: ng.IFormController;
         //Injection für den Konstruktor - Achtung Reihenfolge wichtig!
         static $inject = [
             "$modalInstance",
-            //Services.ServiceName.module.name,
+            Services.TodoService.module.name,
+             "personId"
         ];
 
         constructor(
-            private $modalInstance: ng.ui.bootstrap.IModalServiceInstance
-            //private ServiceName: Services.ServiceInterface,
-            ) {
+            private $modalInstance: ng.ui.bootstrap.IModalServiceInstance,
+            private todoService: Services.ITodoService,
+            private personId: number) {
             this.locals = new MyLocalsModel();
             this.init();
         }
@@ -30,7 +31,7 @@
         * Initiaisieren unseren Modals
         */
         init(): void {
-            //TODO Unsere ViewModeldaten abrufen
+            this.locals.person = this.todoService.getPerson(this.personId);
         }
 
         /**
@@ -39,8 +40,14 @@
         save(): void {
             this.locals.isSaving = true;
             this.locals.hasError = false;
+            this.locals.wasSubmitted = true;
 
-            this.$modalInstance.close();
+            if (this.frm.$valid) {
+               //SaveChanges and Close
+               this.$modalInstance.close();
+            } else {
+                this.locals.isSaving = false;
+            }
         }
 
         /**
@@ -54,7 +61,7 @@
         private static _module: ng.IModule;
 
         /**
-         * Stellt das aktuelle Angular Modul für den "MyModalCtrl" bereit.
+         * Stellt das aktuelle Angular Modul für den "TodoModalCtrl" bereit.
          */
         public static get module(): ng.IModule {
             if (this._module) {
@@ -63,14 +70,15 @@
 
             //Hier die abhängigen Module für diesen controller definieren, damit brauchen wir von Außen nur den Controller einbinden
             //und müssen seine Abhängkeiten nicht wissen.
-            this._module = angular.module('MyModalCtrl', [App.Views.Shared.Custom.ServiceName.module.name, "ui.bootstrap"]);
-            this._module.controller('MyModalCtrl', MyModalCtrl);
+            this._module = angular.module('TodoModalCtrl', ["ui.bootstrap"]);
+            this._module.controller('TodoModalCtrl', TodoModalCtrl);
             return this._module;
         }
         //#endregion
     }
 
     class MyLocalsModel {
+        person: App.Person;
         isSaving: boolean = false;
         isEditMode: boolean;
         hasError: boolean = false;
