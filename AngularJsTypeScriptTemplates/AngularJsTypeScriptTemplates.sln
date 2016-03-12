@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3DEB80EB-DDAB-4B92-B30A-188F6FD8413F}"
 	ProjectSection(SolutionItems) = preProject
@@ -10,7 +10,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ResharperTemplates", "ResharperTemplates", "{05B3F7A1-829D-406E-93AC-057C657892C4}"
 	ProjectSection(SolutionItems) = preProject
-		ResharperTemplates\AngularTemplatesResharper.DotSettings = ResharperTemplates\AngularTemplatesResharper.DotSettings
+		ResharperTemplates\FileTemplates_ASP.NET_BootstrapAndAngular_ForResharper.DotSettings = ResharperTemplates\FileTemplates_ASP.NET_BootstrapAndAngular_ForResharper.DotSettings
+		ResharperTemplates\LiveTemplates_Razor_Bootstrap_ForResharper.DotSettings = ResharperTemplates\LiveTemplates_Razor_Bootstrap_ForResharper.DotSettings
+		ResharperTemplates\LiveTemplates_TypeScript_Angular_ForResharper.DotSettings = ResharperTemplates\LiveTemplates_TypeScript_Angular_ForResharper.DotSettings
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Templates", "Templates\Templates.csproj", "{DE03B75A-8B2F-4D7A-8700-3F17B5C999AB}"

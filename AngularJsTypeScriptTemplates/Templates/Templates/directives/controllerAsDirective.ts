@@ -1,51 +1,58 @@
 ﻿module App.Directives {
 
     /* 
-		* Definition der "Scope" Variablen für die CtrlAsDirectiveName Directive
-		*/
+	* Definition der "Scope" Variablen für die CtrlAsDirectiveName Directive
+	*/
     export interface ICtrlAsDirectiveNameScope {
-        sqTitle;
+        sqTitle: string;
+        isDeleted : boolean;
     }
 
     /*
-		 * Beschreibung
-		 *
-		 * Verwendung: 
-		 *  
-		 */
+	* Beschreibung
+	*
+	* Verwendung: 
+	*  
+	*/
     export class CtrlAsDirectiveName implements ng.IDirective {
         public restrict: string = "A";
         public replcae: boolean = true;
-        //public require = "ngModel";
+        public require = "ngModel";
         //public templateUrl: string = siteRoot + 'ScriptsApp/directives/templates/CtrlAsDirectiveName.directives.html';
-        public template: string = '<a ng-click="directiveName.doSomethingBtnClick()" ng-class="btn btn-default" title="{{directiveName.sqTitle}}">Test</a>';
+        public template: string = '<a ng-click="ctrl.doSomethingBtnClick()" ng-class="btn btn-default" title="{{ctrl.sqTitle}}">Test</a>';
         public scope = {}
 
         public controller = CtrlAsDirectiveNameCtrl;
-        public controllerAs = "directiveName";
-        public bindToController: ICtrlAsDirectiveNameScope = {
-            sqTitle: "=" //Der Titel der angezeigt werden soll Optional
+        public controllerAs = "ctrl";
+        public bindToController = {
+            sqTitle: "=", 
+            isDeleted: "="
         }
 
+        //constructor(private $interval: angular.IIntervalService) { }
         constructor() { }
+
+        public link = ($scope: any, element: JQuery, attr: ng.IAttributes, model: ng.INgModelController) => {
+            
+        }
+
 
         //#region Angular Module Definition
         private static _module: ng.IModule;
-
         /**
-                    * Stellt die Angular Module für CtrlAsDirectiveName bereit.
-                    */
+        * Stellt die Angular Module für CtrlAsDirectiveName bereit.
+        */
         public static get module(): ng.IModule {
             if (this._module) {
                 return this._module;
             }
 
             //Hier die abhängigen Module für unsere Direktive definieren.
-            this._module = angular.module('CtrlAsDirectiveName.directives', []);
+            this._module = angular.module('CtrlAsDirectiveName', []);
+            //this._module.directive('CtrlAsDirectiveName', ["$interval", ($interval: angular.IIntervalService) => { return new CtrlAsDirectiveName($interval); }]);
             this._module.directive('CtrlAsDirectiveName', [() => { return new CtrlAsDirectiveName(); }]);
             return this._module;
         }
-
         //#endregion
     }
 
@@ -54,8 +61,9 @@
 	*/
     export class CtrlAsDirectiveNameCtrl implements ICtrlAsDirectiveNameScope {
         public sqTitle: string;
+        public isDeleted: boolean;
 
-        //static $inject = [];
+        static $inject = [];
 
         constructor() {
             this.init();

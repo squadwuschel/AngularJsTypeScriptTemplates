@@ -26,11 +26,6 @@
 //Unsere Anwendung intial aufrufen/starten&#xD;
 App.MainApp.createApp(angular);&#xD;
 &#xD;
-/*Window Interface erweitern, damit wir auch hier auf z.b. eigene Properties zugreifen können die wir z.B: in alten JS dateien definiert haben */&#xD;
-interface Window {&#xD;
-    siteRoot: string;&#xD;
-}&#xD;
-&#xD;
 //Stackoverflow Post zur Frage wie man eine App am besten initialisiert&#xD;
 //http://stackoverflow.com/questions/29545246/how-to-initialize-angularjs-app-with-typescript&#xD;
 &#xD;
@@ -43,7 +38,7 @@ interface Window {&#xD;
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3E63A78E03EA8A4797A1D9E009EC2F6E/Reformat/@EntryValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3E63A78E03EA8A4797A1D9E009EC2F6E/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3E63A78E03EA8A4797A1D9E009EC2F6E/Categories/=Imported_002012_002E10_002E2015/@EntryIndexedValue">Imported 12.10.2015</s:String>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3E63A78E03EA8A4797A1D9E009EC2F6E/Categories/=Imported_002025_002E10_002E2015/@EntryIndexedValue">Imported 25.10.2015</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3E63A78E03EA8A4797A1D9E009EC2F6E/Categories/=Imported_002012_002E03_002E2016/@EntryIndexedValue">Imported 12.03.2016</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3E63A78E03EA8A4797A1D9E009EC2F6E/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3E63A78E03EA8A4797A1D9E009EC2F6E/Scope/=5A0CCA3880C9804BAC3D41971816B786/@KeyIndexDefined">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3E63A78E03EA8A4797A1D9E009EC2F6E/Scope/=5A0CCA3880C9804BAC3D41971816B786/Type/@EntryValue">InTypeScriptFile</s:String>
@@ -52,23 +47,18 @@ interface Window {&#xD;
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E382A5D0EEBFAA4486C999E5751AB503/Shortcut/@EntryValue">SqAngularController</s:String>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E382A5D0EEBFAA4486C999E5751AB503/Text/@EntryValue">module App.Views.$Ordner$ {&#xD;
     //Den NS importieren für unsere Interfaces aus .NET die vom TypeLite.tt erstellt wurden.&#xD;
-    import My = Sq.Internal.$ProjectName$.Gui.Web.Models;&#xD;
+    import My = Saxoprint.Internal.$ProjectName$.Gui.Web.Models;&#xD;
 &#xD;
     //Alle Variablen für unseren Controller im Interface definieren&#xD;
     export interface I$CtrlName$Ctrl {&#xD;
         //Locals&#xD;
         //viewModel: My.;&#xD;
-        locals: $CtrlName$LocalsModel;&#xD;
         //Functions&#xD;
-        init(): void;&#xD;
-    }&#xD;
-&#xD;
-    export class $CtrlName$LocalsModel {&#xD;
     }&#xD;
 &#xD;
     //Unsere $CtrlName$ Klasse erstellen&#xD;
     export class $CtrlName$Ctrl implements I$CtrlName$Ctrl {&#xD;
-        locals:  $CtrlName$LocalsModel = new $CtrlName$LocalsModel();&#xD;
+        private locals:  $CtrlName$LocalsModel = new $CtrlName$LocalsModel();&#xD;
         static $inject = [&#xD;
 			    &#xD;
         ];&#xD;
@@ -80,7 +70,7 @@ interface Window {&#xD;
         /**&#xD;
         * Initialisieren der wichtigsten lokalen Variablen&#xD;
         */&#xD;
-        init(): void {&#xD;
+        private init(): void {&#xD;
         }&#xD;
 &#xD;
         &#xD;
@@ -102,12 +92,16 @@ interface Window {&#xD;
         }&#xD;
         //#endregion&#xD;
     }&#xD;
+&#xD;
+ 	class $CtrlName$LocalsModel {&#xD;
+    }&#xD;
+&#xD;
 } </s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E382A5D0EEBFAA4486C999E5751AB503/Reformat/@EntryValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E382A5D0EEBFAA4486C999E5751AB503/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E382A5D0EEBFAA4486C999E5751AB503/Categories/=Imported_002010_002E10_002E2015/@EntryIndexedValue">Imported 10.10.2015</s:String>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E382A5D0EEBFAA4486C999E5751AB503/Categories/=Imported_002012_002E10_002E2015/@EntryIndexedValue">Imported 12.10.2015</s:String>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E382A5D0EEBFAA4486C999E5751AB503/Categories/=Imported_002025_002E10_002E2015/@EntryIndexedValue">Imported 25.10.2015</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E382A5D0EEBFAA4486C999E5751AB503/Categories/=Imported_002012_002E03_002E2016/@EntryIndexedValue">Imported 12.03.2016</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E382A5D0EEBFAA4486C999E5751AB503/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E382A5D0EEBFAA4486C999E5751AB503/Scope/=5A0CCA3880C9804BAC3D41971816B786/@KeyIndexDefined">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E382A5D0EEBFAA4486C999E5751AB503/Scope/=5A0CCA3880C9804BAC3D41971816B786/Type/@EntryValue">InTypeScriptFile</s:String>
@@ -174,7 +168,7 @@ interface Window {&#xD;
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=AD5009DE71902B4787B772C04CD3A38C/Reformat/@EntryValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=AD5009DE71902B4787B772C04CD3A38C/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=AD5009DE71902B4787B772C04CD3A38C/Categories/=Imported_002012_002E10_002E2015/@EntryIndexedValue">Imported 12.10.2015</s:String>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=AD5009DE71902B4787B772C04CD3A38C/Categories/=Imported_002025_002E10_002E2015/@EntryIndexedValue">Imported 25.10.2015</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=AD5009DE71902B4787B772C04CD3A38C/Categories/=Imported_002012_002E03_002E2016/@EntryIndexedValue">Imported 12.03.2016</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=AD5009DE71902B4787B772C04CD3A38C/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=AD5009DE71902B4787B772C04CD3A38C/Scope/=5A0CCA3880C9804BAC3D41971816B786/@KeyIndexDefined">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=AD5009DE71902B4787B772C04CD3A38C/Scope/=5A0CCA3880C9804BAC3D41971816B786/Type/@EntryValue">InTypeScriptFile</s:String>
@@ -183,118 +177,111 @@ interface Window {&#xD;
 	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=AD5009DE71902B4787B772C04CD3A38C/Field/=DirectiveName/Order/@EntryValue">0</s:Int64>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=AD5009DE71902B4787B772C04CD3A38C/Field/=directiveModuleName/@KeyIndexDefined">True</s:Boolean>
 	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=AD5009DE71902B4787B772C04CD3A38C/Field/=directiveModuleName/Order/@EntryValue">1</s:Int64>
-	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=52626AD834BDFE49990435CEC2688BF1/@KeyIndexDefined">True</s:Boolean>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=52626AD834BDFE49990435CEC2688BF1/Shortcut/@EntryValue">sqAngularDirectiveControllerAs</s:String>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=52626AD834BDFE49990435CEC2688BF1/Text/@EntryValue">    module App.Directives {&#xD;
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ED3FA1DBE348FF43ADB85A1A58200F69/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ED3FA1DBE348FF43ADB85A1A58200F69/Shortcut/@EntryValue">SqAngularDirectiveControllerAs</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ED3FA1DBE348FF43ADB85A1A58200F69/Description/@EntryValue">Directive mit ControllerAs Syntax</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ED3FA1DBE348FF43ADB85A1A58200F69/Text/@EntryValue">module App.$Namespace$ {&#xD;
 &#xD;
-		/* &#xD;
-		* Definition der "Scope" Variablen für die $DirectiveName$ Directive&#xD;
-		*/&#xD;
-		export interface I$DirectiveName$Scope {&#xD;
-			sqTitle;&#xD;
-		}&#xD;
+    /* &#xD;
+	* Definition der "Scope" Variablen für die $Name$ Directive&#xD;
+	*/&#xD;
+    export interface I$Name$Scope {&#xD;
+        sqTrueFalseView: boolean;&#xD;
+    }&#xD;
 &#xD;
-		/*&#xD;
-		 * Beschreibung&#xD;
-		 *&#xD;
-		 * Verwendung: &#xD;
-		 *  &#xD;
-		 */&#xD;
-		export class $DirectiveName$ implements ng.IDirective {&#xD;
-			public restrict: string = "A";&#xD;
-			public replcae: boolean = true;&#xD;
-			//public require = "ngModel";&#xD;
-			public templateUrl: string = siteRoot + 'ScriptsApp/directives/templates/$DirectiveName$.directives.html';&#xD;
-			//public template: string = '&lt;a ng-click="$DirectiveCtrlAsName$.doSomethingBtnClick()" ng-class="btn btn-default" title="{{$DirectiveCtrlAsName$.sqTitle}}"&gt;Test&lt;/a&gt;';&#xD;
-			public scope = {}&#xD;
-        &#xD;
-			public controller = $DirectiveName$Ctrl;&#xD;
-			public controllerAs = "$DirectiveCtrlAsName$";&#xD;
-			public bindToController: I$DirectiveName$Scope = {&#xD;
-				sqTitle: "="             //Der Titel der angezeigt werden soll Optional&#xD;
-			}&#xD;
+    /*&#xD;
+     * $Beschreibung$&#xD;
+     * &#xD;
+     * Verwendung: &#xD;
+     *&#xD;
+     *  &lt;div sq-true-false-view="ctrl.viewModel.value"&gt;&lt;/div&gt; &#xD;
+     */&#xD;
+    export class $Name$ implements ng.IDirective {&#xD;
+        public restrict: string = "A";&#xD;
+        public replace: boolean = true;&#xD;
+        //public require = "ngModel";&#xD;
+        //public templateUrl: string = siteRoot + 'ScriptsApp/directives/templates/$Name$.html';&#xD;
+        public template: string = `&lt;i ng-class="ctrl.getIconAndColorClass()" class="fa fa-fw"&gt;&lt;/i&gt;`;&#xD;
+        public scope = {}&#xD;
 &#xD;
-			constructor() {  }&#xD;
+        public controller = $Name$Ctrl;&#xD;
+        public controllerAs = "ctrl";&#xD;
+        public bindToController = {&#xD;
+            sqTrueFalseView: "="&#xD;
+        }&#xD;
 &#xD;
-			//#region Angular Module Definition&#xD;
-			private static _module: ng.IModule;&#xD;
-			/**&#xD;
-			* Stellt die Angular Module für $DirectiveName$ bereit.&#xD;
-			*/&#xD;
-			public static get module(): ng.IModule {&#xD;
-				if (this._module) {&#xD;
-					return this._module;&#xD;
-				}&#xD;
+        //constructor(private $interval: angular.IIntervalService) { }&#xD;
+        constructor() { }&#xD;
 &#xD;
-				//Hier die abhängigen Module für unsere Direktive definieren.&#xD;
-				this._module = angular.module('$DirectiveName$.directives', []);&#xD;
-				this._module.directive('$DirectiveName$', [() =&gt; { return new $DirectiveName$(); }]);&#xD;
-				return this._module;&#xD;
-			}&#xD;
-			//#endregion&#xD;
-		}&#xD;
+		public link = ($scope: any, element: JQuery, attr: ng.IAttributes) =&gt; {&#xD;
 &#xD;
-		/*&#xD;
-		* Implementierung unseres $DirectiveName$ Controllers.&#xD;
-		*/&#xD;
-		export class $DirectiveName$Ctrl implements I$DirectiveName$Scope {&#xD;
-			public sqTitle: string;&#xD;
+        }&#xD;
 &#xD;
-			//static $inject = [];&#xD;
+        //#region Angular Module Definition&#xD;
+        private static _module: ng.IModule;&#xD;
+        /**&#xD;
+        * Stellt die Angular Module für TrueFalseView bereit.&#xD;
+        */&#xD;
+        public static get module(): ng.IModule {&#xD;
+            if (this._module) {&#xD;
+                return this._module;&#xD;
+            }&#xD;
 &#xD;
-			/* &#xD;
-			* Da wir die CSS Klassen für einen Provider setzen, hier den passenden Provider injecten und im Template dann auf dessen Config Werte zugreifen.&#xD;
-			*/&#xD;
-			constructor() {&#xD;
-				this.init();&#xD;
-			}&#xD;
+            //Hier die abhängigen Module für unsere Direktive definieren.&#xD;
+            this._module = angular.module('$Name$', []);&#xD;
+            //this._module.directive('$Name$', ["$interval", ($interval: angular.IIntervalService) =&gt; { return new $Name$($interval); }]);&#xD;
+            this._module.directive('$Name$', [() =&gt; { return new $Name$(); }]);&#xD;
+            return this._module;&#xD;
+        }&#xD;
+        //#endregion&#xD;
+    }&#xD;
 &#xD;
-			init(): void { }&#xD;
+    /*&#xD;
+    * Implementierung unseres $Name$ Controllers.&#xD;
+    */&#xD;
+    export class $Name$Ctrl implements I$Name$Scope {&#xD;
+        public sqTrueFalseView: boolean;&#xD;
+        static $inject = [];&#xD;
 &#xD;
-			/*&#xD;
-			* Eine Funktion die z.B: über ein btn Click des Templates aufgerufen werden kann&#xD;
-			*/&#xD;
-			public doSomethingBtnClick(): void {&#xD;
-				//Zugriff auf die "Scope" Variable mit "this"&#xD;
-				this.sqTitle = "Blubb";&#xD;
-			}&#xD;
-		  }&#xD;
-	}</s:String>
-	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=52626AD834BDFE49990435CEC2688BF1/Reformat/@EntryValue">True</s:Boolean>
-	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=52626AD834BDFE49990435CEC2688BF1/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
-	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=52626AD834BDFE49990435CEC2688BF1/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
-	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=52626AD834BDFE49990435CEC2688BF1/Scope/=5A0CCA3880C9804BAC3D41971816B786/@KeyIndexDefined">True</s:Boolean>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=52626AD834BDFE49990435CEC2688BF1/Scope/=5A0CCA3880C9804BAC3D41971816B786/Type/@EntryValue">InTypeScriptFile</s:String>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=52626AD834BDFE49990435CEC2688BF1/Scope/=5A0CCA3880C9804BAC3D41971816B786/CustomProperties/=availableInTypeScript/@EntryIndexedValue">True</s:String>
-	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=52626AD834BDFE49990435CEC2688BF1/Field/=DirectiveName/@KeyIndexDefined">True</s:Boolean>
-	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=52626AD834BDFE49990435CEC2688BF1/Field/=DirectiveName/Order/@EntryValue">0</s:Int64>
-	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=52626AD834BDFE49990435CEC2688BF1/Field/=DirectiveCtrlAsName/@KeyIndexDefined">True</s:Boolean>
-	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=52626AD834BDFE49990435CEC2688BF1/Field/=DirectiveCtrlAsName/Order/@EntryValue">1</s:Int64>
+        constructor() { }&#xD;
+&#xD;
+        public getIconAndColorClass(): string {&#xD;
+            if (this.sqTrueFalseView === undefined || this.sqTrueFalseView === null) {&#xD;
+                return "fa-ban text-grey";&#xD;
+            }&#xD;
+&#xD;
+            return "";&#xD;
+        }&#xD;
+    }&#xD;
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ED3FA1DBE348FF43ADB85A1A58200F69/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ED3FA1DBE348FF43ADB85A1A58200F69/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ED3FA1DBE348FF43ADB85A1A58200F69/Categories/=Imported_002012_002E03_002E2016/@EntryIndexedValue">Imported 12.03.2016</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ED3FA1DBE348FF43ADB85A1A58200F69/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ED3FA1DBE348FF43ADB85A1A58200F69/Scope/=5A0CCA3880C9804BAC3D41971816B786/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ED3FA1DBE348FF43ADB85A1A58200F69/Scope/=5A0CCA3880C9804BAC3D41971816B786/Type/@EntryValue">InTypeScriptFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ED3FA1DBE348FF43ADB85A1A58200F69/Scope/=5A0CCA3880C9804BAC3D41971816B786/CustomProperties/=availableInTypeScript/@EntryIndexedValue">True</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ED3FA1DBE348FF43ADB85A1A58200F69/Field/=Namespace/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ED3FA1DBE348FF43ADB85A1A58200F69/Field/=Namespace/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ED3FA1DBE348FF43ADB85A1A58200F69/Field/=Name/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ED3FA1DBE348FF43ADB85A1A58200F69/Field/=Name/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ED3FA1DBE348FF43ADB85A1A58200F69/Field/=Beschreibung/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ED3FA1DBE348FF43ADB85A1A58200F69/Field/=Beschreibung/Order/@EntryValue">2</s:Int64>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3F652754A201C9459CC39D6B243C016E/@KeyIndexDefined">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3F652754A201C9459CC39D6B243C016E/Shortcut/@EntryValue">SqAngularModalCtrl</s:String>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3F652754A201C9459CC39D6B243C016E/Description/@EntryValue">AngularJs TypeScript Modal Controller</s:String>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3F652754A201C9459CC39D6B243C016E/Text/@EntryValue">module App.Views.$Ordner$ {&#xD;
     //Den NS importieren für unsere Interfaces aus .NET die vom TypeLite.tt erstellt wurden.&#xD;
-    import My = Sq.Internal...;&#xD;
+    import My = Saxoprint.Internal...;&#xD;
 &#xD;
     export interface I$ControllerName$ModalCtrl {&#xD;
-        locals: $ControllerName$LocalsModel;&#xD;
-        init(): void;&#xD;
         save(): void;&#xD;
         cancel(): void;&#xD;
     }&#xD;
 &#xD;
-    export class $ControllerName$LocalsModel {&#xD;
-        isSaving: boolean = false;&#xD;
-        isEditMode: boolean;&#xD;
-        hasError: boolean = false;&#xD;
-        wasSubmitted: boolean = false;&#xD;
-        errorMessage: string = "Es ist ein Fehler aufgetreten";&#xD;
-    }&#xD;
-&#xD;
     export class $ControllerName$ModalCtrl implements I$ControllerName$ModalCtrl {&#xD;
-        //viewModel: My.IAddOrEditTreeNodeViewModel;&#xD;
-        locals: $ControllerName$LocalsModel;&#xD;
+        //public viewModel: My.IAddOrEditTreeNodeViewModel;&#xD;
+        private locals: $ControllerName$LocalsModel;&#xD;
         frm: ng.IFormController;&#xD;
         //Injection für den Konstruktor - Achtung Reihenfolge wichtig!&#xD;
         static $inject = [&#xD;
@@ -306,7 +293,7 @@ interface Window {&#xD;
         constructor(&#xD;
 			private $modalInstance: ng.ui.bootstrap.IModalServiceInstance,&#xD;
 			private $ServiceName$: Services.$ServiceInterface$, &#xD;
-			private messageFactory: Sq.IMessageFactory) {&#xD;
+			private messageFactory: Sxp.IMessageFactory) {&#xD;
 		    this.locals = new $ControllerName$LocalsModel();&#xD;
             this.init();&#xD;
         }&#xD;
@@ -314,14 +301,14 @@ interface Window {&#xD;
         /**&#xD;
         * Initiaisieren unseren Modals&#xD;
         */&#xD;
-        init(): void {&#xD;
+        private init(): void {&#xD;
            //TODO Unsere ViewModeldaten abrufen&#xD;
         }&#xD;
 &#xD;
         /**&#xD;
-        * Importieren der Resourcentexte die angegeben wurden.&#xD;
+        *  Speichern der Daten&#xD;
         */&#xD;
-        save(): void {&#xD;
+        public save(): void {&#xD;
             this.locals.isSaving = true;&#xD;
             this.locals.hasError = false;&#xD;
 &#xD;
@@ -331,7 +318,7 @@ interface Window {&#xD;
         /**&#xD;
          * Vorgang abbrechen&#xD;
         */&#xD;
-        cancel(): void {&#xD;
+        public cancel(): void {&#xD;
             this.$modalInstance.dismiss('cancel');&#xD;
         }&#xD;
 &#xD;
@@ -353,12 +340,20 @@ interface Window {&#xD;
         }&#xD;
         //#endregion&#xD;
     }&#xD;
+&#xD;
+	class $ControllerName$LocalsModel {&#xD;
+        public isSaving: boolean = false;&#xD;
+        public isEditMode: boolean;&#xD;
+        public hasError: boolean = false;&#xD;
+        public wasSubmitted: boolean = false;&#xD;
+        public errorMessage: string = "Es ist ein Fehler aufgetreten";&#xD;
+    }&#xD;
 } </s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3F652754A201C9459CC39D6B243C016E/Reformat/@EntryValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3F652754A201C9459CC39D6B243C016E/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3F652754A201C9459CC39D6B243C016E/Categories/=Imported_002010_002E10_002E2015/@EntryIndexedValue">Imported 10.10.2015</s:String>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3F652754A201C9459CC39D6B243C016E/Categories/=Imported_002012_002E10_002E2015/@EntryIndexedValue">Imported 12.10.2015</s:String>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3F652754A201C9459CC39D6B243C016E/Categories/=Imported_002025_002E10_002E2015/@EntryIndexedValue">Imported 25.10.2015</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3F652754A201C9459CC39D6B243C016E/Categories/=Imported_002012_002E03_002E2016/@EntryIndexedValue">Imported 12.03.2016</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3F652754A201C9459CC39D6B243C016E/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3F652754A201C9459CC39D6B243C016E/Scope/=5A0CCA3880C9804BAC3D41971816B786/@KeyIndexDefined">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3F652754A201C9459CC39D6B243C016E/Scope/=5A0CCA3880C9804BAC3D41971816B786/Type/@EntryValue">InTypeScriptFile</s:String>
@@ -391,12 +386,11 @@ interface Window {&#xD;
         constructor(private $modal: ng.ui.bootstrap.IModalService, private $q: ng.IQService) { }&#xD;
       &#xD;
         /**&#xD;
-         * Bearbeiten eines TodoItems, dem die passende TodoId Übergeben wird und ein Modal zum Bearbeiten öffnet.&#xD;
-         * @param id Die Id des TodoItems welches Bearbeitet werden soll.&#xD;
+         * Beschreibung!&#xD;
          */&#xD;
         public editTodoItem(id: Number): ng.IPromise&lt;My.ITodoCreateViewModel&gt; {&#xD;
             var options: ng.ui.bootstrap.IModalSettings = {&#xD;
-                templateUrl: '/Todo/TodoEditModal',&#xD;
+                templateUrl: 'Todo/TodoEditModal',&#xD;
                 //Controller As Syntax für Modal Controller&#xD;
                 controller: App.Views.Todo.TodoEditModalCtrl.module.name + ' as todoCtrl',&#xD;
                 size: 'lg',&#xD;
@@ -436,7 +430,7 @@ interface Window {&#xD;
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DB79E24DB423EE4FAA1CF39FBFCDCDE8/Reformat/@EntryValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DB79E24DB423EE4FAA1CF39FBFCDCDE8/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DB79E24DB423EE4FAA1CF39FBFCDCDE8/Categories/=Imported_002012_002E10_002E2015/@EntryIndexedValue">Imported 12.10.2015</s:String>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DB79E24DB423EE4FAA1CF39FBFCDCDE8/Categories/=Imported_002025_002E10_002E2015/@EntryIndexedValue">Imported 25.10.2015</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DB79E24DB423EE4FAA1CF39FBFCDCDE8/Categories/=Imported_002012_002E03_002E2016/@EntryIndexedValue">Imported 12.03.2016</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DB79E24DB423EE4FAA1CF39FBFCDCDE8/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DB79E24DB423EE4FAA1CF39FBFCDCDE8/Scope/=5A0CCA3880C9804BAC3D41971816B786/@KeyIndexDefined">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DB79E24DB423EE4FAA1CF39FBFCDCDE8/Scope/=5A0CCA3880C9804BAC3D41971816B786/Type/@EntryValue">InTypeScriptFile</s:String>
@@ -452,16 +446,25 @@ interface Window {&#xD;
      */&#xD;
     export class RouteConfig {&#xD;
         constructor(private $stateProvider: ng.ui.IStateProvider, private $urlRouterProvider: ng.ui.IUrlRouterProvider, private $locationProvider: ng.ILocationProvider) {&#xD;
-            this.Init();&#xD;
+            this.init();&#xD;
         }&#xD;
 &#xD;
-        private Init(): void {&#xD;
+        private init(): void {&#xD;
             //$urlRouterProvider.when('/Home', '/home/index');&#xD;
             this.$urlRouterProvider.otherwise("Todo/Overview");&#xD;
             //$locationProvider.html5Mode(true);&#xD;
 &#xD;
             //Definieren der Routen die in unserer App zur Verfügung stehen.&#xD;
             this.$stateProvider&#xD;
+			    .state('NotAuthorized', {&#xD;
+                    url: "/NotAuthorized",&#xD;
+                    templateUrl: "Account/NotAuthorized"&#xD;
+                })&#xD;
+                .state('ServerError', {&#xD;
+                    url: "/ServerError",&#xD;
+                    templateUrl: "Account/ServerError",&#xD;
+                    params: { serverError: String }&#xD;
+                })&#xD;
                 .state("Todo", {&#xD;
                 url: "/Todo",&#xD;
                 templateUrl: "Todo/TodoOverview"&#xD;
@@ -480,7 +483,7 @@ interface Window {&#xD;
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=60F71E706AC7C34CB4E9622D2A62874E/Reformat/@EntryValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=60F71E706AC7C34CB4E9622D2A62874E/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=60F71E706AC7C34CB4E9622D2A62874E/Categories/=Imported_002012_002E10_002E2015/@EntryIndexedValue">Imported 12.10.2015</s:String>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=60F71E706AC7C34CB4E9622D2A62874E/Categories/=Imported_002025_002E10_002E2015/@EntryIndexedValue">Imported 25.10.2015</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=60F71E706AC7C34CB4E9622D2A62874E/Categories/=Imported_002012_002E03_002E2016/@EntryIndexedValue">Imported 12.03.2016</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=60F71E706AC7C34CB4E9622D2A62874E/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=60F71E706AC7C34CB4E9622D2A62874E/Scope/=5A0CCA3880C9804BAC3D41971816B786/@KeyIndexDefined">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=60F71E706AC7C34CB4E9622D2A62874E/Scope/=5A0CCA3880C9804BAC3D41971816B786/Type/@EntryValue">InTypeScriptFile</s:String>
@@ -489,7 +492,7 @@ interface Window {&#xD;
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1625A43355C78E4A9777564DCE6DB793/Shortcut/@EntryValue">SqAngularService</s:String>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1625A43355C78E4A9777564DCE6DB793/Text/@EntryValue">module App.Views.Shared.Custom {&#xD;
     //Den NS importieren für unsere Interfaces aus .NET die vom TypeLite.tt erstellt wurden.&#xD;
-    //import My = Sq.Internal.;&#xD;
+    //import My = Saxoprint.Internal.;&#xD;
 &#xD;
     export interface I$ServiceName$ {&#xD;
     }&#xD;
@@ -523,7 +526,7 @@ interface Window {&#xD;
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1625A43355C78E4A9777564DCE6DB793/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1625A43355C78E4A9777564DCE6DB793/Categories/=Imported_002010_002E10_002E2015/@EntryIndexedValue">Imported 10.10.2015</s:String>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1625A43355C78E4A9777564DCE6DB793/Categories/=Imported_002012_002E10_002E2015/@EntryIndexedValue">Imported 12.10.2015</s:String>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1625A43355C78E4A9777564DCE6DB793/Categories/=Imported_002025_002E10_002E2015/@EntryIndexedValue">Imported 25.10.2015</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1625A43355C78E4A9777564DCE6DB793/Categories/=Imported_002012_002E03_002E2016/@EntryIndexedValue">Imported 12.03.2016</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1625A43355C78E4A9777564DCE6DB793/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1625A43355C78E4A9777564DCE6DB793/Scope/=5A0CCA3880C9804BAC3D41971816B786/@KeyIndexDefined">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1625A43355C78E4A9777564DCE6DB793/Scope/=5A0CCA3880C9804BAC3D41971816B786/Type/@EntryValue">InTypeScriptFile</s:String>
@@ -577,7 +580,7 @@ interface Window {&#xD;
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A8D83B44A24AB44D98CEE0C4DBA21F11/Reformat/@EntryValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A8D83B44A24AB44D98CEE0C4DBA21F11/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A8D83B44A24AB44D98CEE0C4DBA21F11/Categories/=Imported_002012_002E10_002E2015/@EntryIndexedValue">Imported 12.10.2015</s:String>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A8D83B44A24AB44D98CEE0C4DBA21F11/Categories/=Imported_002025_002E10_002E2015/@EntryIndexedValue">Imported 25.10.2015</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A8D83B44A24AB44D98CEE0C4DBA21F11/Categories/=Imported_002012_002E03_002E2016/@EntryIndexedValue">Imported 12.03.2016</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A8D83B44A24AB44D98CEE0C4DBA21F11/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A8D83B44A24AB44D98CEE0C4DBA21F11/Scope/=5A0CCA3880C9804BAC3D41971816B786/@KeyIndexDefined">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A8D83B44A24AB44D98CEE0C4DBA21F11/Scope/=5A0CCA3880C9804BAC3D41971816B786/Type/@EntryValue">InTypeScriptFile</s:String>
@@ -585,4 +588,27 @@ interface Window {&#xD;
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A8D83B44A24AB44D98CEE0C4DBA21F11/Field/=ProviderName/@KeyIndexDefined">True</s:Boolean>
 	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A8D83B44A24AB44D98CEE0C4DBA21F11/Field/=ProviderName/Order/@EntryValue">0</s:Int64>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A8D83B44A24AB44D98CEE0C4DBA21F11/Field/=providerModuleName/@KeyIndexDefined">True</s:Boolean>
-	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A8D83B44A24AB44D98CEE0C4DBA21F11/Field/=providerModuleName/Order/@EntryValue">1</s:Int64></wpf:ResourceDictionary>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A8D83B44A24AB44D98CEE0C4DBA21F11/Field/=providerModuleName/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=43980F8EE85C1842B990B8C6225AB865/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=43980F8EE85C1842B990B8C6225AB865/Shortcut/@EntryValue">sqSearchFunc</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=43980F8EE85C1842B990B8C6225AB865/Text/@EntryValue">public search(resetPage: boolean): void {&#xD;
+    //Das Zurücksetzten des aktuellen Pageindex ist notwendig, wenn wir uns z.B. auf seite 6 befinden&#xD;
+    //und eine neue Suche starten für andere Parameter auf der es keine Seite 6 gibt!&#xD;
+    if (resetPage) {&#xD;
+        this.searchModel.PagingParameter.CurrentPageIndex = 0;&#xD;
+    }&#xD;
+&#xD;
+    this.$service$(this.searchModel).then(result =&gt; {&#xD;
+        this.resultModel = result;&#xD;
+        this.searchModel.PagingParameter = result.PagingParameter;&#xD;
+    });&#xD;
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=43980F8EE85C1842B990B8C6225AB865/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=43980F8EE85C1842B990B8C6225AB865/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=43980F8EE85C1842B990B8C6225AB865/Categories/=Imported_002012_002E03_002E2016/@EntryIndexedValue">Imported 12.03.2016</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=43980F8EE85C1842B990B8C6225AB865/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=43980F8EE85C1842B990B8C6225AB865/Scope/=5A0CCA3880C9804BAC3D41971816B786/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=43980F8EE85C1842B990B8C6225AB865/Scope/=5A0CCA3880C9804BAC3D41971816B786/Type/@EntryValue">InTypeScriptFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=43980F8EE85C1842B990B8C6225AB865/Scope/=5A0CCA3880C9804BAC3D41971816B786/CustomProperties/=availableInTypeScript/@EntryIndexedValue">True</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=43980F8EE85C1842B990B8C6225AB865/Field/=service/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=43980F8EE85C1842B990B8C6225AB865/Field/=service/Order/@EntryValue">0</s:Int64></wpf:ResourceDictionary>

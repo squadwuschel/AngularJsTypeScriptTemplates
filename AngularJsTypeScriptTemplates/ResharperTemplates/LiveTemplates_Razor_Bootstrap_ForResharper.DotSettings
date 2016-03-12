@@ -1,0 +1,289 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=65FB5931130B0B4A88F3D84027C5D490/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=65FB5931130B0B4A88F3D84027C5D490/Shortcut/@EntryValue">tableSort</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=65FB5931130B0B4A88F3D84027C5D490/Text/@EntryValue">&lt;div class="panel panel-default"&gt;&#xD;
+       &lt;div class="panel-heading"&gt;&lt;strong&gt;$TableName$ (&lt;span ng-bind="ctrl.resultModel.Entries.length"&gt;&lt;/span&gt;)&lt;/strong&gt; &lt;/div&gt;&#xD;
+       &lt;table class="sxp-preise table table-condensed table-hover"&gt;&#xD;
+           &lt;thead&gt;&#xD;
+           &lt;tr&gt;&#xD;
+               &lt;th&gt;&#xD;
+                   &lt;sxp-simple-sort-header search-model="ctrl.searchModel" search-function="ctrl.search()" sort-property-name="'@$SortName$'" header-name="'Id'"&gt; &lt;/sxp-simple-sort-header&gt;&#xD;
+               &lt;/th&gt;&#xD;
+               &lt;th&gt;Options&lt;/th&gt;&#xD;
+           &lt;/tr&gt;&#xD;
+           &lt;/thead&gt;	&#xD;
+           &lt;tbody ng-if="ctrl.resultModel.Entries.length &gt; 0"&gt;&#xD;
+           &lt;tr ng-repeat="row in ctrl.resultModel.Entries"&gt;&#xD;
+               &lt;td ng-bind="::row.Id"&gt;&lt;/td&gt;&#xD;
+               &lt;td&gt;&#xD;
+             &#xD;
+               &lt;/td&gt;&#xD;
+           &lt;/tr&gt;&#xD;
+           &lt;/tbody&gt;&#xD;
+           &lt;tbody ng-if="ctrl.resultModel.Entries.length === 0"&gt;&#xD;
+           &lt;tr&gt;&#xD;
+               &lt;td colspan="5" class="text-center"&gt;&lt;strong&gt;Es wurden keine $TableName$ gefunden.&lt;/strong&gt;&lt;/td&gt;&#xD;
+           &lt;/tr&gt;&#xD;
+           &lt;/tbody&gt;&#xD;
+           &lt;tbody ng-if="ctrl.resultModel.Entries === undefined"&gt;&#xD;
+           &lt;tr&gt;&#xD;
+               &lt;td colspan="5" class="text-center"&gt;&lt;strong&gt;Es wurde noch keine Suche ausgeführt&lt;/strong&gt;&lt;/td&gt;&#xD;
+           &lt;/tr&gt;&#xD;
+           &lt;/tbody&gt;&#xD;
+       &lt;/table&gt;&#xD;
+       &lt;div class="panel-footer" ng-if="ctrl.resultModel.Entries.length &gt; 0"&gt;&#xD;
+           &lt;div class="row"&gt;&#xD;
+               &lt;div class="col-md-4"&gt;&#xD;
+                   &lt;sxp-simple-paging search-model="ctrl.searchModel" search-function="ctrl.search()"&gt;&#xD;
+                   &lt;/sxp-simple-paging&gt;&#xD;
+               &lt;/div&gt;&#xD;
+               &lt;div class="col-md-1 col-md-offset-7"&gt;&#xD;
+                   &lt;sxp-simple-pagesize search-model="ctrl.searchModel" search-function="ctrl.search()" stepsize-array="[@Constants.DefaultPageSize,30,50,100]"&gt;&lt;/sxp-simple-pagesize&gt;&#xD;
+               &lt;/div&gt;&#xD;
+           &lt;/div&gt;&#xD;
+       &lt;/div&gt;&#xD;
+   &lt;/div&gt;</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=65FB5931130B0B4A88F3D84027C5D490/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=65FB5931130B0B4A88F3D84027C5D490/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=65FB5931130B0B4A88F3D84027C5D490/Categories/=Imported_002004_002E03_002E2016/@EntryIndexedValue">Imported 04.03.2016</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=65FB5931130B0B4A88F3D84027C5D490/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=65FB5931130B0B4A88F3D84027C5D490/Scope/=3CDDF046BEA72B499BFB0E0D6A845C94/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=65FB5931130B0B4A88F3D84027C5D490/Scope/=3CDDF046BEA72B499BFB0E0D6A845C94/Type/@EntryValue">InRazorFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=65FB5931130B0B4A88F3D84027C5D490/Field/=TableName/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=65FB5931130B0B4A88F3D84027C5D490/Field/=TableName/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=65FB5931130B0B4A88F3D84027C5D490/Field/=SortName/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=65FB5931130B0B4A88F3D84027C5D490/Field/=SortName/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6BE17C93E42B6040BABAA98680F29342/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6BE17C93E42B6040BABAA98680F29342/Shortcut/@EntryValue">ac</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6BE17C93E42B6040BABAA98680F29342/Description/@EntryValue">Custom</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6BE17C93E42B6040BABAA98680F29342/Text/@EntryValue">&lt;a ng-click="ctrl.$fctName$" class="btn btn-default btn-$size$" title="$title$"&gt;&lt;i class="fa fa-fw $icoName$"&gt;&lt;/i&gt;&lt;/a&gt;&#xD;
+$END$</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6BE17C93E42B6040BABAA98680F29342/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6BE17C93E42B6040BABAA98680F29342/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6BE17C93E42B6040BABAA98680F29342/Categories/=Imported_002004_002E03_002E2016/@EntryIndexedValue">Imported 04.03.2016</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6BE17C93E42B6040BABAA98680F29342/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6BE17C93E42B6040BABAA98680F29342/Scope/=3CDDF046BEA72B499BFB0E0D6A845C94/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6BE17C93E42B6040BABAA98680F29342/Scope/=3CDDF046BEA72B499BFB0E0D6A845C94/Type/@EntryValue">InRazorFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6BE17C93E42B6040BABAA98680F29342/Field/=fctName/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6BE17C93E42B6040BABAA98680F29342/Field/=fctName/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6BE17C93E42B6040BABAA98680F29342/Field/=size/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6BE17C93E42B6040BABAA98680F29342/Field/=size/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6BE17C93E42B6040BABAA98680F29342/Field/=icoName/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6BE17C93E42B6040BABAA98680F29342/Field/=icoName/Order/@EntryValue">2</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6BE17C93E42B6040BABAA98680F29342/Field/=title/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6BE17C93E42B6040BABAA98680F29342/Field/=title/Order/@EntryValue">3</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0EB3C794EE98F64496C5912740B1B378/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0EB3C794EE98F64496C5912740B1B378/Shortcut/@EntryValue">al</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0EB3C794EE98F64496C5912740B1B378/Text/@EntryValue">&lt;a ui-sref="$link$({$id$})" class="btn btn-default btn-$size$" title="$title$"&gt;&lt;i class="fa fa-fw $icoName$"&gt;&lt;/i&gt;&lt;/a&gt;&#xD;
+$END$</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0EB3C794EE98F64496C5912740B1B378/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0EB3C794EE98F64496C5912740B1B378/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0EB3C794EE98F64496C5912740B1B378/Categories/=Imported_002004_002E03_002E2016/@EntryIndexedValue">Imported 04.03.2016</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0EB3C794EE98F64496C5912740B1B378/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0EB3C794EE98F64496C5912740B1B378/Scope/=3CDDF046BEA72B499BFB0E0D6A845C94/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0EB3C794EE98F64496C5912740B1B378/Scope/=3CDDF046BEA72B499BFB0E0D6A845C94/Type/@EntryValue">InRazorFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0EB3C794EE98F64496C5912740B1B378/Field/=size/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0EB3C794EE98F64496C5912740B1B378/Field/=size/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0EB3C794EE98F64496C5912740B1B378/Field/=title/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0EB3C794EE98F64496C5912740B1B378/Field/=title/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0EB3C794EE98F64496C5912740B1B378/Field/=icoName/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0EB3C794EE98F64496C5912740B1B378/Field/=icoName/Order/@EntryValue">2</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0EB3C794EE98F64496C5912740B1B378/Field/=link/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0EB3C794EE98F64496C5912740B1B378/Field/=link/Order/@EntryValue">3</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0EB3C794EE98F64496C5912740B1B378/Field/=id/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0EB3C794EE98F64496C5912740B1B378/Field/=id/Order/@EntryValue">4</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2A7BEFC404AB034296677150061E63C7/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2A7BEFC404AB034296677150061E63C7/Shortcut/@EntryValue">date</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2A7BEFC404AB034296677150061E63C7/Text/@EntryValue">&lt;div class="input-group  input-group-sm"&gt;&#xD;
+    &lt;input  ng-model="ctrl.$model$" type="text" class="form-control" id="$id$" bs-datepicker placeholder="$placeholder$"&gt;&#xD;
+         &lt;label class="input-group-addon" for="$id$"&gt;&#xD;
+             &lt;i class="fa fa-calendar"&gt;&#xD;
+             &lt;/i&gt;&#xD;
+         &lt;/label&gt;&#xD;
+&lt;/div&gt;</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2A7BEFC404AB034296677150061E63C7/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2A7BEFC404AB034296677150061E63C7/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2A7BEFC404AB034296677150061E63C7/Categories/=Imported_002004_002E03_002E2016/@EntryIndexedValue">Imported 04.03.2016</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2A7BEFC404AB034296677150061E63C7/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2A7BEFC404AB034296677150061E63C7/Scope/=3CDDF046BEA72B499BFB0E0D6A845C94/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2A7BEFC404AB034296677150061E63C7/Scope/=3CDDF046BEA72B499BFB0E0D6A845C94/Type/@EntryValue">InRazorFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2A7BEFC404AB034296677150061E63C7/Field/=model/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2A7BEFC404AB034296677150061E63C7/Field/=model/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2A7BEFC404AB034296677150061E63C7/Field/=id/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2A7BEFC404AB034296677150061E63C7/Field/=id/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2A7BEFC404AB034296677150061E63C7/Field/=placeholder/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2A7BEFC404AB034296677150061E63C7/Field/=placeholder/Order/@EntryValue">2</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B95903B32A83394FA0533886C4DC1F67/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B95903B32A83394FA0533886C4DC1F67/Shortcut/@EntryValue">header</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B95903B32A83394FA0533886C4DC1F67/Description/@EntryValue">custom</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B95903B32A83394FA0533886C4DC1F67/Text/@EntryValue">&lt;div ng-controller="$CtrlName$ as ctrl"&gt;&#xD;
+    &lt;div class="row"&gt;&#xD;
+        &lt;div class="col-md-12"&gt;&#xD;
+            &lt;h4&gt;&#xD;
+                &lt;strong&gt;&#xD;
+                    $Pagename$&lt;/strong&gt;&lt;/h4&gt;&#xD;
+        &lt;/div&gt;&#xD;
+    &lt;/div&gt;&#xD;
+    &lt;div class="row"&gt;&#xD;
+        &lt;div class="col-md-12"&gt;&#xD;
+            &lt;hr class="hr-small" /&gt;&#xD;
+        &lt;/div&gt;&#xD;
+    &lt;/div&gt;&#xD;
+    &lt;div class="row"&gt;&#xD;
+        &lt;div class="col-md-12"&gt;&#xD;
+        &lt;/div&gt;&#xD;
+    &lt;/div&gt;&#xD;
+&lt;/div&gt;</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B95903B32A83394FA0533886C4DC1F67/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B95903B32A83394FA0533886C4DC1F67/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B95903B32A83394FA0533886C4DC1F67/Categories/=Imported_002004_002E03_002E2016/@EntryIndexedValue">Imported 04.03.2016</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B95903B32A83394FA0533886C4DC1F67/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B95903B32A83394FA0533886C4DC1F67/Scope/=3CDDF046BEA72B499BFB0E0D6A845C94/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B95903B32A83394FA0533886C4DC1F67/Scope/=3CDDF046BEA72B499BFB0E0D6A845C94/Type/@EntryValue">InRazorFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B95903B32A83394FA0533886C4DC1F67/Field/=CtrlName/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B95903B32A83394FA0533886C4DC1F67/Field/=CtrlName/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B95903B32A83394FA0533886C4DC1F67/Field/=Pagename/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B95903B32A83394FA0533886C4DC1F67/Field/=Pagename/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=947B4AFD0B66874B9F3BFCCFCD5A9177/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=947B4AFD0B66874B9F3BFCCFCD5A9177/Shortcut/@EntryValue">input</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=947B4AFD0B66874B9F3BFCCFCD5A9177/Description/@EntryValue">Custom</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=947B4AFD0B66874B9F3BFCCFCD5A9177/Text/@EntryValue">  &lt;div class="form-horizontal"&gt;&#xD;
+   &lt;div class="form-group" ng-class="{'has-error': ctrl.frm.$Name$.$invalid &amp;&amp; ctrl.locals.wasSubmitted }"&gt;&#xD;
+       &lt;label class="col-md-4 control-label"&gt;&#xD;
+           $Name$*&#xD;
+       &lt;/label&gt;&#xD;
+       &lt;div class="col-md-8"&gt;&#xD;
+           &lt;input ng-model="ctrl.viewModel.$Name$" name="$Name$" type="text" required maxlength="200" class="form-control input-sm" placeholder="$Placeholder$" /&gt;&#xD;
+           &lt;label class="control-label text-danger small" ng-if="ctrl.frm.$Name$.$invalid &amp;&amp; ctrl.locals.wasSubmitted"&gt;&#xD;
+               Es muss eine $Name$ eingeben werden.&#xD;
+           &lt;/label&gt;&#xD;
+       &lt;/div&gt;&#xD;
+   &lt;/div&gt;&#xD;
+ &lt;/div&gt;&#xD;
+ $END$</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=947B4AFD0B66874B9F3BFCCFCD5A9177/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=947B4AFD0B66874B9F3BFCCFCD5A9177/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=947B4AFD0B66874B9F3BFCCFCD5A9177/Categories/=Imported_002004_002E03_002E2016/@EntryIndexedValue">Imported 04.03.2016</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=947B4AFD0B66874B9F3BFCCFCD5A9177/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=947B4AFD0B66874B9F3BFCCFCD5A9177/Scope/=3CDDF046BEA72B499BFB0E0D6A845C94/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=947B4AFD0B66874B9F3BFCCFCD5A9177/Scope/=3CDDF046BEA72B499BFB0E0D6A845C94/Type/@EntryValue">InRazorFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=947B4AFD0B66874B9F3BFCCFCD5A9177/Field/=Name/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=947B4AFD0B66874B9F3BFCCFCD5A9177/Field/=Name/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=947B4AFD0B66874B9F3BFCCFCD5A9177/Field/=Placeholder/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=947B4AFD0B66874B9F3BFCCFCD5A9177/Field/=Placeholder/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FA47482C7215CF41A0F1AF8899D795F5/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FA47482C7215CF41A0F1AF8899D795F5/Shortcut/@EntryValue">panel</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FA47482C7215CF41A0F1AF8899D795F5/Text/@EntryValue">&lt;div class="panel panel-default"&gt;&#xD;
+  &lt;div class="panel-heading"&gt;&#xD;
+	&lt;div class="row"&gt;&#xD;
+		&lt;div class="col-md-10&gt;&#xD;
+			&lt;strong&gt;$PanelName$&lt;/strong&gt;&#xD;
+		&lt;/div&gt;&#xD;
+		&lt;div class="col-md-2&gt;&lt;/div&gt;&#xD;
+	&lt;/div&gt;&#xD;
+  &lt;/div&gt;&#xD;
+  &lt;div class="panel-body"&gt;&#xD;
+    $END$&#xD;
+  &lt;/div&gt;&#xD;
+&lt;/div&gt;</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FA47482C7215CF41A0F1AF8899D795F5/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FA47482C7215CF41A0F1AF8899D795F5/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FA47482C7215CF41A0F1AF8899D795F5/Categories/=Imported_002004_002E03_002E2016/@EntryIndexedValue">Imported 04.03.2016</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FA47482C7215CF41A0F1AF8899D795F5/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FA47482C7215CF41A0F1AF8899D795F5/Scope/=3CDDF046BEA72B499BFB0E0D6A845C94/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FA47482C7215CF41A0F1AF8899D795F5/Scope/=3CDDF046BEA72B499BFB0E0D6A845C94/Type/@EntryValue">InRazorFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FA47482C7215CF41A0F1AF8899D795F5/Field/=PanelName/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=FA47482C7215CF41A0F1AF8899D795F5/Field/=PanelName/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=EC1F21439F00734DB6F9B2A7CB9C84F3/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=EC1F21439F00734DB6F9B2A7CB9C84F3/Shortcut/@EntryValue">row12</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=EC1F21439F00734DB6F9B2A7CB9C84F3/Text/@EntryValue">&lt;div class="row"&gt;&#xD;
+ &lt;div class="col-md-12"&gt;$END$&lt;/div&gt;&#xD;
+&lt;/div&gt;</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=EC1F21439F00734DB6F9B2A7CB9C84F3/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=EC1F21439F00734DB6F9B2A7CB9C84F3/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=EC1F21439F00734DB6F9B2A7CB9C84F3/Categories/=Imported_002004_002E03_002E2016/@EntryIndexedValue">Imported 04.03.2016</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=EC1F21439F00734DB6F9B2A7CB9C84F3/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=EC1F21439F00734DB6F9B2A7CB9C84F3/Scope/=3CDDF046BEA72B499BFB0E0D6A845C94/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=EC1F21439F00734DB6F9B2A7CB9C84F3/Scope/=3CDDF046BEA72B499BFB0E0D6A845C94/Type/@EntryValue">InRazorFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E455F0977A3BBE4F890FB60020EC3FDB/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E455F0977A3BBE4F890FB60020EC3FDB/Shortcut/@EntryValue">row4</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E455F0977A3BBE4F890FB60020EC3FDB/Text/@EntryValue">&lt;div class="row"&gt;&#xD;
+ &lt;div class="col-md-4"&gt;$END$&lt;/div&gt;&#xD;
+ &lt;div class="col-md-4"&gt;&lt;/div&gt;&#xD;
+ &lt;div class="col-md-4"&gt;&lt;/div&gt;&#xD;
+&lt;/div&gt;</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E455F0977A3BBE4F890FB60020EC3FDB/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E455F0977A3BBE4F890FB60020EC3FDB/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E455F0977A3BBE4F890FB60020EC3FDB/Categories/=Imported_002004_002E03_002E2016/@EntryIndexedValue">Imported 04.03.2016</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E455F0977A3BBE4F890FB60020EC3FDB/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E455F0977A3BBE4F890FB60020EC3FDB/Scope/=3CDDF046BEA72B499BFB0E0D6A845C94/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E455F0977A3BBE4F890FB60020EC3FDB/Scope/=3CDDF046BEA72B499BFB0E0D6A845C94/Type/@EntryValue">InRazorFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9E016E3B265BEA4084651FB101B80217/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9E016E3B265BEA4084651FB101B80217/Shortcut/@EntryValue">row6</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9E016E3B265BEA4084651FB101B80217/Text/@EntryValue">&lt;div class="row"&gt;&#xD;
+ &lt;div class="col-md-6"&gt;$END$&lt;/div&gt;&#xD;
+ &lt;div class="col-md-6"&gt;&lt;/div&gt;&#xD;
+&lt;/div&gt;</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9E016E3B265BEA4084651FB101B80217/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9E016E3B265BEA4084651FB101B80217/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9E016E3B265BEA4084651FB101B80217/Categories/=Imported_002004_002E03_002E2016/@EntryIndexedValue">Imported 04.03.2016</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9E016E3B265BEA4084651FB101B80217/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9E016E3B265BEA4084651FB101B80217/Scope/=3CDDF046BEA72B499BFB0E0D6A845C94/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9E016E3B265BEA4084651FB101B80217/Scope/=3CDDF046BEA72B499BFB0E0D6A845C94/Type/@EntryValue">InRazorFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8FCD686A7DB6EA459E764AE1D9F8F96B/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8FCD686A7DB6EA459E764AE1D9F8F96B/Shortcut/@EntryValue">select</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8FCD686A7DB6EA459E764AE1D9F8F96B/Description/@EntryValue">custom</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8FCD686A7DB6EA459E764AE1D9F8F96B/Text/@EntryValue">  &lt;select ng-model="ctrl.$model$" ng-options="item.Value as item.Text for item in $ListItems$" name="$Name$" class="form-control"&gt;&lt;/select&gt;</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8FCD686A7DB6EA459E764AE1D9F8F96B/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8FCD686A7DB6EA459E764AE1D9F8F96B/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8FCD686A7DB6EA459E764AE1D9F8F96B/Categories/=Imported_002004_002E03_002E2016/@EntryIndexedValue">Imported 04.03.2016</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8FCD686A7DB6EA459E764AE1D9F8F96B/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8FCD686A7DB6EA459E764AE1D9F8F96B/Scope/=3CDDF046BEA72B499BFB0E0D6A845C94/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8FCD686A7DB6EA459E764AE1D9F8F96B/Scope/=3CDDF046BEA72B499BFB0E0D6A845C94/Type/@EntryValue">InRazorFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8FCD686A7DB6EA459E764AE1D9F8F96B/Field/=model/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8FCD686A7DB6EA459E764AE1D9F8F96B/Field/=model/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8FCD686A7DB6EA459E764AE1D9F8F96B/Field/=ListItems/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8FCD686A7DB6EA459E764AE1D9F8F96B/Field/=ListItems/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8FCD686A7DB6EA459E764AE1D9F8F96B/Field/=Name/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8FCD686A7DB6EA459E764AE1D9F8F96B/Field/=Name/Order/@EntryValue">2</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=373B232088484F43AA2BB675FF3EA80F/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=373B232088484F43AA2BB675FF3EA80F/Shortcut/@EntryValue">table</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=373B232088484F43AA2BB675FF3EA80F/Description/@EntryValue">Custom</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=373B232088484F43AA2BB675FF3EA80F/Text/@EntryValue"> &lt;table class="table table-condensed table-striped table-hover"&gt;&#xD;
+     &lt;thead&gt;&#xD;
+     &lt;tr&gt;&#xD;
+         &lt;th&gt;Id&lt;/th&gt;&#xD;
+         &lt;th&gt;Option&lt;/th&gt;&#xD;
+     &lt;/tr&gt;&#xD;
+     &lt;/thead&gt;&#xD;
+     &lt;tbody ng-if="$collection$.length &gt; 0"&gt;&#xD;
+     &lt;tr ng-repeat="row in $collection$"&gt;&#xD;
+         &lt;td ng-bind="row.Id"&gt;&lt;/td&gt;&#xD;
+         &lt;td&gt;&#xD;
+             $END$&#xD;
+         &lt;/td&gt;&#xD;
+     &lt;/tr&gt;&#xD;
+     &lt;/tbody&gt;&#xD;
+		  &lt;tbody ng-if="$collection$.length === 0"&gt;&#xD;
+     &lt;tr&gt;&#xD;
+         &lt;td colspan="3" class="text-center"&gt;&#xD;
+             &lt;strong&gt;Es wurden keine Elemente gefunden&lt;/strong&gt;&#xD;
+         &lt;/td&gt;&#xD;
+     &lt;/tr&gt;&#xD;
+     &lt;/tbody&gt;&#xD;
+     &lt;tbody ng-if="$collection$ === undefined"&gt;&#xD;
+         &lt;tr&gt;&#xD;
+             &lt;td colspan="3" class="text-center"&gt;&#xD;
+                 &lt;strong&gt;Die Suche wurde noch nicht gestartet&lt;/strong&gt;&#xD;
+             &lt;/td&gt;&#xD;
+         &lt;/tr&gt;&#xD;
+     &lt;/tbody&gt;&#xD;
+&lt;/table&gt;	</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=373B232088484F43AA2BB675FF3EA80F/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=373B232088484F43AA2BB675FF3EA80F/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=373B232088484F43AA2BB675FF3EA80F/Categories/=Imported_002004_002E03_002E2016/@EntryIndexedValue">Imported 04.03.2016</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=373B232088484F43AA2BB675FF3EA80F/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=373B232088484F43AA2BB675FF3EA80F/Scope/=3CDDF046BEA72B499BFB0E0D6A845C94/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=373B232088484F43AA2BB675FF3EA80F/Scope/=3CDDF046BEA72B499BFB0E0D6A845C94/Type/@EntryValue">InRazorFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=373B232088484F43AA2BB675FF3EA80F/Field/=collection/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=373B232088484F43AA2BB675FF3EA80F/Field/=collection/Order/@EntryValue">0</s:Int64></wpf:ResourceDictionary>

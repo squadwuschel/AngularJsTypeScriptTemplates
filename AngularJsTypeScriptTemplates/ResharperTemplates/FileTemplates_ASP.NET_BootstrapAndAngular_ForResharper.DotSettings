@@ -1,0 +1,270 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7F2E1CDAA9244F4DA59498698CD1305E/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7F2E1CDAA9244F4DA59498698CD1305E/Description/@EntryValue">AngularJs Menue</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7F2E1CDAA9244F4DA59498698CD1305E/Text/@EntryValue">@{&#xD;
+    Layout = null;&#xD;
+}&#xD;
+&#xD;
+&lt;div class="navbar-xs"&gt;&#xD;
+    &lt;div class="navbar navbar-default navbar-fixed-top navbar-dok"&gt;&#xD;
+        &lt;div class="container"&gt;&#xD;
+            &lt;div class="collapse navbar-collapse"&gt;&#xD;
+                &lt;ul class="nav navbar-nav"&gt;&#xD;
+                    &lt;li ui-sref-active="active"&gt;&#xD;
+                        &lt;a ui-sref=".Verwaltung" ui-sref-opts="{reload: true}"&gt;&#xD;
+                            &lt;i class="fa fa-users"&gt;&#xD;
+                            &lt;/i&gt;&#xD;
+                            &amp;nbsp;$Menuename$&#xD;
+                        &lt;/a&gt;&#xD;
+                    &lt;/li&gt;&#xD;
+                &lt;/ul&gt;&#xD;
+            &lt;/div&gt;&#xD;
+        &lt;/div&gt;&#xD;
+    &lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&#xD;
+&lt;div ui-view&gt;&lt;/div&gt;</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7F2E1CDAA9244F4DA59498698CD1305E/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7F2E1CDAA9244F4DA59498698CD1305E/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7F2E1CDAA9244F4DA59498698CD1305E/Categories/=Imported_002004_002E03_002E2016/@EntryIndexedValue">Imported 04.03.2016</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7F2E1CDAA9244F4DA59498698CD1305E/CustomProperties/=Extension/@EntryIndexedValue">cshtml</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7F2E1CDAA9244F4DA59498698CD1305E/CustomProperties/=FileName/@EntryIndexedValue">_Menue</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7F2E1CDAA9244F4DA59498698CD1305E/CustomProperties/=ValidateFileName/@EntryIndexedValue">True</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7F2E1CDAA9244F4DA59498698CD1305E/Applicability/=File/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7F2E1CDAA9244F4DA59498698CD1305E/Scope/=50AF970EC1279940A9104D92F89E47E1/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7F2E1CDAA9244F4DA59498698CD1305E/Scope/=50AF970EC1279940A9104D92F89E47E1/Type/@EntryValue">InAspCSharpProject</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7F2E1CDAA9244F4DA59498698CD1305E/Field/=Menuename/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7F2E1CDAA9244F4DA59498698CD1305E/Field/=Menuename/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6A0CD863A0132E418593674B9F5FDAB5/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6A0CD863A0132E418593674B9F5FDAB5/Description/@EntryValue">AngularJs ModalCtrl AddOrEdit</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6A0CD863A0132E418593674B9F5FDAB5/Text/@EntryValue">@{&#xD;
+    Layout = null;&#xD;
+}&#xD;
+@* Modal $Beschreibung$ *@&#xD;
+@* Controller: $Ctrlname$ as ctrl *@&#xD;
+&lt;div class="modal-header"&gt;&#xD;
+    &lt;div class="row"&gt;&#xD;
+        &lt;div class="col-md-11" style="margin-top: 5px;"&gt;&#xD;
+            &lt;strong ng-if="ctrl.locals.isEditMode"&gt;&#xD;
+                Anwendung bearbeiten&#xD;
+            &lt;/strong&gt;&#xD;
+            &lt;strong ng-if="!ctrl.locals.isEditMode"&gt;&#xD;
+                Neue Anwendung anlegen&#xD;
+            &lt;/strong&gt;&#xD;
+        &lt;/div&gt;&#xD;
+        &lt;div class="col-md-1"&gt;&#xD;
+            &lt;sxp-spinner&gt;&lt;/sxp-spinner&gt;&#xD;
+        &lt;/div&gt;&#xD;
+    &lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;form name="ctrl.frm" ng-submit="ctrl.save()" novalidate&gt;&#xD;
+    &lt;div class="modal-body"&gt;&#xD;
+        &lt;div class="row"&gt;&#xD;
+            &lt;div class="col-md-12"&gt;&#xD;
+                &lt;div class="form-horizontal"&gt;&#xD;
+                    &lt;div class="form-group" ng-class="{'has-error': ctrl.frm.serverlevel.$invalid &amp;&amp; ctrl.locals.wasSubmitted }"&gt;&#xD;
+                        &lt;label class="col-md-3 control-label"&gt;&#xD;
+                            Serverlevel*&#xD;
+                        &lt;/label&gt;&#xD;
+                        &lt;div class="col-md-9"&gt;&#xD;
+                            &lt;select ng-disabled="ctrl.locals.isEditMode" ng-model="ctrl.viewModel.ServerLevel" ng-options="item.Value as item.Text for item in ctrl.locals.serverLevelList" required name="serverlevel" class="form-control"&gt;&lt;/select&gt;&#xD;
+                        &lt;/div&gt;&#xD;
+                    &lt;/div&gt;&#xD;
+                &lt;/div&gt;&#xD;
+                &lt;div class="form-horizontal"&gt;&#xD;
+                    &lt;div class="form-group" ng-class="{'has-error': ctrl.frm.beschreibung.$invalid &amp;&amp; ctrl.locals.wasSubmitted }"&gt;&#xD;
+                        &lt;label class="col-md-3 control-label"&gt;&#xD;
+                            Beschreibung*&#xD;
+                        &lt;/label&gt;&#xD;
+                        &lt;div class="col-md-9"&gt;&#xD;
+                            &lt;input ng-model="ctrl.viewModel.Beschreibung" name="beschreibung" type="text" required maxlength="200" class="form-control input-sm" placeholder="Beschreibung eingeben" /&gt;&#xD;
+                            &lt;label class="control-label text-danger small" ng-if="ctrl.frm.beschreibung.$invalid &amp;&amp; ctrl.locals.wasSubmitted"&gt;&#xD;
+                                Es muss eine Beschreibung eingeben werden.&#xD;
+                            &lt;/label&gt;&#xD;
+                        &lt;/div&gt;&#xD;
+                    &lt;/div&gt;&#xD;
+                &lt;/div&gt;&#xD;
+            &lt;/div&gt;&#xD;
+        &lt;/div&gt;&#xD;
+        &lt;div class="row" ng-if="ctrl.locals.hasError"&gt;&#xD;
+            &lt;div class="col-md-12  small"&gt;&#xD;
+                &lt;div class="alert alert-danger" style="margin-bottom: 0" role="alert"&gt;&lt;strong ng-bind="ctrl.locals.errorMessage"&gt;&lt;/strong&gt;&lt;/div&gt;&#xD;
+            &lt;/div&gt;&#xD;
+        &lt;/div&gt;&#xD;
+        @*&lt;pre&gt;{{ctrl.viewModel | json}}&lt;/pre&gt;*@&#xD;
+    &lt;/div&gt;&#xD;
+    &lt;div class="modal-footer"&gt;&#xD;
+        &lt;div class="row"&gt;&#xD;
+            &lt;div class="col-md-2"&gt;&#xD;
+                &lt;a ng-if="!ctrl.locals.isSaving" ng-click="ctrl.cancel()" title="Abbrechen" href="" class="btn btn-default btn-block"&gt;&#xD;
+                    &lt;i class="fa fa-times"&gt;&#xD;
+                    &lt;/i&gt;&#xD;
+                    &amp;nbsp;Abbrechen&#xD;
+                &lt;/a&gt;&#xD;
+            &lt;/div&gt;&#xD;
+            &lt;div class="col-md-4 col-md-offset-6"&gt;&#xD;
+                &lt;button type="submit" ng-if="!ctrl.locals.isSaving" ng-click="ctrl.save()" href="" class="btn btn-block btn-primary pull-right"&gt;&#xD;
+                    &lt;i ng-if="!ctrl.locals.isEditMode" class="fa fa-fw fa-plus"&gt;&lt;/i&gt;&#xD;
+                    &lt;span ng-if="!ctrl.locals.isEditMode"&gt;&amp;nbsp;Anlegen&lt;/span&gt;&#xD;
+                    &lt;i ng-if="ctrl.locals.isEditMode" class="fa fa-fw fa-save"&gt;&lt;/i&gt;&#xD;
+                    &lt;span ng-if="ctrl.locals.isEditMode"&gt;&amp;nbsp;Speichern&lt;/span&gt;&#xD;
+                &lt;/button&gt;&#xD;
+            &lt;/div&gt;&#xD;
+        &lt;/div&gt;&#xD;
+    &lt;/div&gt;&#xD;
+&lt;/form&gt;&#xD;
+</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6A0CD863A0132E418593674B9F5FDAB5/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6A0CD863A0132E418593674B9F5FDAB5/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6A0CD863A0132E418593674B9F5FDAB5/Categories/=Imported_002004_002E03_002E2016/@EntryIndexedValue">Imported 04.03.2016</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6A0CD863A0132E418593674B9F5FDAB5/CustomProperties/=Extension/@EntryIndexedValue">cshtml</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6A0CD863A0132E418593674B9F5FDAB5/CustomProperties/=FileName/@EntryIndexedValue">AddOrEditModalCtrl</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6A0CD863A0132E418593674B9F5FDAB5/CustomProperties/=ValidateFileName/@EntryIndexedValue">True</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6A0CD863A0132E418593674B9F5FDAB5/Applicability/=File/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6A0CD863A0132E418593674B9F5FDAB5/Scope/=50AF970EC1279940A9104D92F89E47E1/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6A0CD863A0132E418593674B9F5FDAB5/Scope/=50AF970EC1279940A9104D92F89E47E1/Type/@EntryValue">InAspCSharpProject</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6A0CD863A0132E418593674B9F5FDAB5/Field/=Beschreibung/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6A0CD863A0132E418593674B9F5FDAB5/Field/=Beschreibung/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6A0CD863A0132E418593674B9F5FDAB5/Field/=Ctrlname/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6A0CD863A0132E418593674B9F5FDAB5/Field/=Ctrlname/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9253E198D17ABF4F8E0B722C5AC8C537/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9253E198D17ABF4F8E0B722C5AC8C537/Description/@EntryValue">AngularJs ViewCtrl</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9253E198D17ABF4F8E0B722C5AC8C537/Text/@EntryValue">@{&#xD;
+    Layout = null;&#xD;
+}&#xD;
+&lt;div ng-controller="$CtrlName$ as ctrl"&gt;&#xD;
+    &lt;div class="row"&gt;&#xD;
+        &lt;div class="col-md-4"&gt;&#xD;
+            &lt;h4 style="margin-bottom: 5px;"&gt;&#xD;
+                &lt;strong&gt;$Ueberschrift$&lt;/strong&gt;&#xD;
+            &lt;/h4&gt;&#xD;
+        &lt;/div&gt;&#xD;
+		&lt;div class="col-md-2 col-md-offset-6"&gt;&#xD;
+            &lt;a ng-click="ctrl.addEntry()" class="btn btn-default btn-sm pull-right" title=""&gt;&lt;i class="fa fa-fw fa-plus"&gt;&lt;/i&gt;&lt;/a&gt;&#xD;
+        &lt;/div&gt;&#xD;
+    &lt;/div&gt;&#xD;
+    &lt;div class="row"&gt;&#xD;
+        &lt;div class="col-md-12"&gt;&#xD;
+            &lt;hr class="hr-small" /&gt;&#xD;
+        &lt;/div&gt;&#xD;
+    &lt;/div&gt;&#xD;
+	&lt;div class="row"&gt;&#xD;
+        &lt;div class="col-md-12"&gt;&#xD;
+            $END$&#xD;
+        &lt;/div&gt;&#xD;
+    &lt;/div&gt;&#xD;
+&lt;/div&gt;</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9253E198D17ABF4F8E0B722C5AC8C537/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9253E198D17ABF4F8E0B722C5AC8C537/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9253E198D17ABF4F8E0B722C5AC8C537/Categories/=Imported_002004_002E03_002E2016/@EntryIndexedValue">Imported 04.03.2016</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9253E198D17ABF4F8E0B722C5AC8C537/CustomProperties/=Extension/@EntryIndexedValue">cshtml</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9253E198D17ABF4F8E0B722C5AC8C537/CustomProperties/=FileName/@EntryIndexedValue">DefaultController</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9253E198D17ABF4F8E0B722C5AC8C537/CustomProperties/=ValidateFileName/@EntryIndexedValue">True</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9253E198D17ABF4F8E0B722C5AC8C537/Applicability/=File/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9253E198D17ABF4F8E0B722C5AC8C537/Scope/=50AF970EC1279940A9104D92F89E47E1/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9253E198D17ABF4F8E0B722C5AC8C537/Scope/=50AF970EC1279940A9104D92F89E47E1/Type/@EntryValue">InAspCSharpProject</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9253E198D17ABF4F8E0B722C5AC8C537/Field/=CtrlName/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9253E198D17ABF4F8E0B722C5AC8C537/Field/=CtrlName/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9253E198D17ABF4F8E0B722C5AC8C537/Field/=Ueberschrift/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9253E198D17ABF4F8E0B722C5AC8C537/Field/=Ueberschrift/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2273F1E1CDB70844952BF63DB8BD2292/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2273F1E1CDB70844952BF63DB8BD2292/Description/@EntryValue">AngularJs ViewCtrl Extended</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2273F1E1CDB70844952BF63DB8BD2292/Text/@EntryValue">@{&#xD;
+    Layout = null;&#xD;
+}&#xD;
+&lt;div ng-controller="$ControllerName$Ctrl as ctrl"&gt;&#xD;
+    &lt;div class="row"&gt;&#xD;
+        &lt;div class="col-md-4"&gt;&#xD;
+            &lt;h4 style="margin-bottom: 5px;"&gt;&#xD;
+                &lt;strong&gt;$ViewName$&lt;/strong&gt;&#xD;
+            &lt;/h4&gt;&#xD;
+        &lt;/div&gt;&#xD;
+        &lt;div class="col-md-2 col-md-offset-6"&gt;&#xD;
+            &lt;a ng-click="ctrl.add$ElementName$()" class="btn btn-default btn-sm pull-right" title="Neue $ElementName$ anlegen"&gt;&lt;i class="fa fa-fw fa-plus"&gt;&lt;/i&gt;&lt;/a&gt;&#xD;
+        &lt;/div&gt;&#xD;
+    &lt;/div&gt;&#xD;
+    &lt;div class="row"&gt;&#xD;
+        &lt;div class="col-md-12"&gt;&#xD;
+            &lt;hr class="hr-small"/&gt;&#xD;
+        &lt;/div&gt;&#xD;
+    &lt;/div&gt;&#xD;
+    &lt;div class="row form-horizontal"&gt;&#xD;
+        &lt;div class="col-md-4"&gt;&#xD;
+            &lt;div class="form-group"&gt;&#xD;
+                &lt;label class="col-md-4 control-label"&gt;$ElementName$&lt;/label&gt;&#xD;
+                &lt;div class="col-md-8"&gt;&#xD;
+                    &lt;input ng-model="ctrl.searchModel.$ElementName$" type="text" class="form-control input-sm" /&gt;&#xD;
+                &lt;/div&gt;&#xD;
+            &lt;/div&gt;&#xD;
+        &lt;/div&gt;&#xD;
+        &lt;div class="col-md-4 col-md-offset-4"&gt;&#xD;
+            &lt;a ng-click="ctrl.search()" class="btn btn-primary btn-sm pull-right"&gt;&lt;i class="fa fa-fw fa-search"&gt;&lt;/i&gt;&amp;nbsp;Suchen&lt;/a&gt;&#xD;
+        &lt;/div&gt;&#xD;
+    &lt;/div&gt;&#xD;
+    &lt;div class="row"&gt;&#xD;
+        &lt;div class="col-md-12"&gt;&#xD;
+            &lt;hr class="hr-small" /&gt;&#xD;
+        &lt;/div&gt;&#xD;
+    &lt;/div&gt;&#xD;
+    &lt;div class="row"&gt;&#xD;
+        &lt;div class="col-md-12"&gt;&#xD;
+            &lt;div class="panel panel-default"&gt;&#xD;
+                &lt;div class="panel-heading"&gt;&lt;strong&gt;$ViewName$ (&lt;span ng-bind="ctrl.resultModel.Entries.length"&gt;&lt;/span&gt;)&lt;/strong&gt; &lt;/div&gt;&#xD;
+                &lt;table class="sxp-preise table table-condensed table-hover"&gt;&#xD;
+                    &lt;thead&gt;&#xD;
+                        &lt;tr&gt;&#xD;
+                            &lt;th&gt;&#xD;
+							  &lt;sxp-simple-sort-header search-model="ctrl.searchModel" search-function="ctrl.search()" sort-property-name="'TODO'" header-name="'Id'"&gt; &lt;/sxp-simple-sort-header&gt;&#xD;
+							&lt;/th&gt;&#xD;
+                            &lt;th&gt;Options&lt;/th&gt;&#xD;
+                        &lt;/tr&gt;&#xD;
+                    &lt;/thead&gt;&#xD;
+                    &lt;tbody ng-if="ctrl.resultModel.Entries.length &gt; 0"&gt;&#xD;
+                        &lt;tr ng-repeat="row in ctrl.resultModel.Entries"&gt;&#xD;
+                            &lt;td ng-bind="row.Id"&gt;&lt;/td&gt;&#xD;
+                            &lt;td&gt;&#xD;
+                                &lt;a ng-click="ctrl.editEntry(row.Id)" class="btn btn-default btn-xs" title="$ElementName$ bearbeiten"&gt;&lt;i class="fa fa-fw fa-edit"&gt;&lt;/i&gt;&lt;/a&gt;&#xD;
+                            &lt;/td&gt;&#xD;
+                        &lt;/tr&gt;&#xD;
+                    &lt;/tbody&gt;&#xD;
+                    &lt;tbody ng-if="ctrl.resultModel.Entries.length === 0"&gt;&#xD;
+                        &lt;tr&gt;&#xD;
+                            &lt;td colspan="4" class="text-center"&gt;&lt;strong&gt;Es wurden keine Elemente gefunden.&lt;/strong&gt;&lt;/td&gt;&#xD;
+                        &lt;/tr&gt;&#xD;
+                    &lt;/tbody&gt;&#xD;
+                    &lt;tbody ng-if="ctrl.resultModel.Entries === undefined"&gt;&#xD;
+                        &lt;tr&gt;&#xD;
+                            &lt;td colspan="4" class="text-center"&gt;&lt;strong&gt;Es wurde noch keine Suche ausgeführt&lt;/strong&gt;&lt;/td&gt;&#xD;
+                        &lt;/tr&gt;&#xD;
+                    &lt;/tbody&gt;&#xD;
+                &lt;/table&gt;&#xD;
+				 &lt;div class="panel-footer" ng-if="ctrl.resultModel.Entries.length &gt; 0"&gt;&#xD;
+                    &lt;div class="row"&gt;&#xD;
+                        &lt;div class="col-md-4"&gt;&#xD;
+                            &lt;sxp-simple-paging search-model="ctrl.searchModel" search-function="ctrl.search()"&gt;&#xD;
+                            &lt;/sxp-simple-paging&gt;&#xD;
+                        &lt;/div&gt;&#xD;
+                        &lt;div class="col-md-1 col-md-offset-7"&gt;&#xD;
+                            &lt;sxp-simple-pagesize search-model="ctrl.searchModel" search-function="ctrl.search()" stepsize-array="[@Constants.DefaultPageSize,30,50,100]"&gt;&lt;/sxp-simple-pagesize&gt;&#xD;
+                        &lt;/div&gt;&#xD;
+                    &lt;/div&gt;&#xD;
+                &lt;/div&gt;&#xD;
+            &lt;/div&gt;&#xD;
+        &lt;/div&gt;&#xD;
+    &lt;/div&gt;&#xD;
+&lt;/div&gt;</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2273F1E1CDB70844952BF63DB8BD2292/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2273F1E1CDB70844952BF63DB8BD2292/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2273F1E1CDB70844952BF63DB8BD2292/Categories/=Imported_002004_002E03_002E2016/@EntryIndexedValue">Imported 04.03.2016</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2273F1E1CDB70844952BF63DB8BD2292/CustomProperties/=Extension/@EntryIndexedValue">cshtml</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2273F1E1CDB70844952BF63DB8BD2292/CustomProperties/=FileName/@EntryIndexedValue">ViewCtrlExtended</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2273F1E1CDB70844952BF63DB8BD2292/CustomProperties/=ValidateFileName/@EntryIndexedValue">True</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2273F1E1CDB70844952BF63DB8BD2292/Applicability/=File/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2273F1E1CDB70844952BF63DB8BD2292/Scope/=50AF970EC1279940A9104D92F89E47E1/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2273F1E1CDB70844952BF63DB8BD2292/Scope/=50AF970EC1279940A9104D92F89E47E1/Type/@EntryValue">InAspCSharpProject</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2273F1E1CDB70844952BF63DB8BD2292/Field/=ControllerName/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2273F1E1CDB70844952BF63DB8BD2292/Field/=ControllerName/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2273F1E1CDB70844952BF63DB8BD2292/Field/=ViewName/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2273F1E1CDB70844952BF63DB8BD2292/Field/=ViewName/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2273F1E1CDB70844952BF63DB8BD2292/Field/=ElementName/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2273F1E1CDB70844952BF63DB8BD2292/Field/=ElementName/Order/@EntryValue">2</s:Int64></wpf:ResourceDictionary>
