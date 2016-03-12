@@ -47,7 +47,7 @@ App.MainApp.createApp(angular);&#xD;
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E382A5D0EEBFAA4486C999E5751AB503/Shortcut/@EntryValue">SqAngularController</s:String>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E382A5D0EEBFAA4486C999E5751AB503/Text/@EntryValue">module App.Views.$Ordner$ {&#xD;
     //Den NS importieren für unsere Interfaces aus .NET die vom TypeLite.tt erstellt wurden.&#xD;
-    import My = Saxoprint.Internal.$ProjectName$.Gui.Web.Models;&#xD;
+    import My = Sq.Internal.$ProjectName$.Gui.Web.Models;&#xD;
 &#xD;
     //Alle Variablen für unseren Controller im Interface definieren&#xD;
     export interface I$CtrlName$Ctrl {&#xD;
@@ -272,7 +272,7 @@ App.MainApp.createApp(angular);&#xD;
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3F652754A201C9459CC39D6B243C016E/Description/@EntryValue">AngularJs TypeScript Modal Controller</s:String>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3F652754A201C9459CC39D6B243C016E/Text/@EntryValue">module App.Views.$Ordner$ {&#xD;
     //Den NS importieren für unsere Interfaces aus .NET die vom TypeLite.tt erstellt wurden.&#xD;
-    import My = Saxoprint.Internal...;&#xD;
+    import My = Sq.Internal...;&#xD;
 &#xD;
     export interface I$ControllerName$ModalCtrl {&#xD;
         save(): void;&#xD;
@@ -492,7 +492,7 @@ App.MainApp.createApp(angular);&#xD;
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1625A43355C78E4A9777564DCE6DB793/Shortcut/@EntryValue">SqAngularService</s:String>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1625A43355C78E4A9777564DCE6DB793/Text/@EntryValue">module App.Views.Shared.Custom {&#xD;
     //Den NS importieren für unsere Interfaces aus .NET die vom TypeLite.tt erstellt wurden.&#xD;
-    //import My = Saxoprint.Internal.;&#xD;
+    //import My = Sq.Internal.;&#xD;
 &#xD;
     export interface I$ServiceName$ {&#xD;
     }&#xD;
