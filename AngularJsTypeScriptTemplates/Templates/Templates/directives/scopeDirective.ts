@@ -1,7 +1,7 @@
 ﻿module App.Directives {
 
     interface IDirectiveNameScope extends ng.IScope {
-        //sqDragData: any;
+        sqDragData: string;
     }
 
     /*
@@ -14,9 +14,10 @@
      */
     export class DirectiveName implements ng.IDirective {
         public restrict = "A";
+        public require = "ngModel";
         //public template = "<span>Test Direktive draggable <span ng-bind='name'></span> </span>";
         public scope = {
-            //sqDragData: "=", //Die Daten die verschoben werden sollen
+            sqDragData: "=", //Die Daten die verschoben werden sollen
         
         }
 
@@ -26,7 +27,14 @@
         constructor() {
         }
 
-        public link = ($scope: IDirectiveNameScope, element: JQuery, attr: ng.IAttributes) => {
+        public link = ($scope: IDirectiveNameScope, element: JQuery, attr: ng.IAttributes, ngModel) => {
+            //var value = ngModel.$viewValue;
+
+            //$scope.$watch(() => ngModel.$viewValue, (old, newValue) => {
+
+            //    var name = "test";
+
+            //});
 
         }
 
@@ -45,7 +53,7 @@
             }
 
             //Hier die abhängigen Module für unsere Direktive definieren.
-            this._module = angular.module('directiveModuleName.directives', []);
+            this._module = angular.module('directiveName', []);
             //this._module.directive('DirectiveName', [(xyzDataService: IxyzDataService, abcConfig: IabcServiceProvider) => { return new DirectiveName(xyzDataService, abcConfig); }]);
             this._module.directive('directiveName', [() => { return new DirectiveName(); }]);
             return this._module;

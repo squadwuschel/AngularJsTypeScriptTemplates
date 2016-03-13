@@ -23,39 +23,54 @@
 
             <table class="table table-condensed table-striped table-hover">
                 <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Name</th>
-                        <th>Alter</th>
-                        <th>Option</th>
-                    </tr>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Alter</th>
+                    <th>Option</th>
+                </tr>
                 </thead>
                 <tbody ng-if="ctrl.locals.persons.length > 0">
-                    <tr ng-repeat="row in ctrl.locals.persons">
-                        <td ng-bind="row.id"></td>
-                        <td ng-bind="row.name | addPrefix:'**'"></td>
-                        <td ng-bind="row.age"></td>
-                        <td>
-                            <a ng-click="ctrl.editPerson(row.id)" class="btn btn-default btn-xs" title="Person bearbeiten">EDIT</a>
-                        </td>
-                    </tr>
+                <tr ng-repeat="row in ctrl.locals.persons">
+                    <td ng-bind="row.id"></td>
+                    <td ng-bind="row.name | addPrefix:'**'"></td>
+                    <td ng-bind="row.age"></td>
+                    <td>
+                        <a ng-click="ctrl.editPerson(row.id)" class="btn btn-default btn-xs" title="Person bearbeiten">EDIT</a>
+                    </td>
+                </tr>
                 </tbody>
                 <tbody ng-if="ctrl.locals.persons.length === 0">
-                    <tr>
-                        <td colspan="3" class="text-center">
-                            <strong>Es wurden keine Elemente gefunden</strong>
-                        </td>
-                    </tr>
+                <tr>
+                    <td colspan="3" class="text-center">
+                        <strong>Es wurden keine Elemente gefunden</strong>
+                    </td>
+                </tr>
                 </tbody>
                 <tbody ng-if="ctrl.locals.persons === undefined">
-                    <tr>
-                        <td colspan="3" class="text-center">
-                            <strong>Die Suche wurde noch nicht gestartet</strong>
-                        </td>
-                    </tr>
+                <tr>
+                    <td colspan="3" class="text-center">
+                        <strong>Die Suche wurde noch nicht gestartet</strong>
+                    </td>
+                </tr>
                 </tbody>
             </table>
 
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-md-4 control-label">
+                        Name*
+                    </label>
+                    <div class="col-md-8">
+                        <input ng-model="ctrl.locals.name" directive-name type="text" class="form-control input-sm" placeholder="Name"/>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </div>
 </div>

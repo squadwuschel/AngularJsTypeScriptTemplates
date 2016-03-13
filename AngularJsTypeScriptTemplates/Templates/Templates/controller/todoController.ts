@@ -57,6 +57,7 @@
     }
 
     class CtrlNameLocalsModel {
-        persons : App.Person[] = [];
+        persons: App.Person[] = [];
+        name : string = "SquadWuschel";
     }
 } 

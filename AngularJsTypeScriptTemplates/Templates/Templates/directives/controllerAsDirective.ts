@@ -5,8 +5,9 @@
 	*/
     export interface ICtrlAsDirectiveNameScope {
         sqTitle: string;
-        isDeleted : boolean;
-    }
+        isDeleted: boolean;
+        model: string;
+}
 
     /*
 	* Beschreibung
@@ -26,14 +27,15 @@
         public controllerAs = "ctrl";
         public bindToController = {
             sqTitle: "=", 
-            isDeleted: "="
+            isDeleted: "=",
+            model : "=ngModel"
         }
 
         //constructor(private $interval: angular.IIntervalService) { }
         constructor() { }
 
-        public link = ($scope: any, element: JQuery, attr: ng.IAttributes, model: ng.INgModelController) => {
-            
+        public link = ($scope: any, element: JQuery, attrs: ng.IAttributes, model: ng.INgModelController) => {
+
         }
 
 
@@ -62,6 +64,7 @@
     export class CtrlAsDirectiveNameCtrl implements ICtrlAsDirectiveNameScope {
         public sqTitle: string;
         public isDeleted: boolean;
+        public model: string;
 
         static $inject = [];
 
