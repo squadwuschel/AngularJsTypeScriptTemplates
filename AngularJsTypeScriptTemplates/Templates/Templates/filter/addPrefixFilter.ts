@@ -6,13 +6,13 @@
      * Verwendung: 
      *  TODO 
      */
-    export class ThousandDividerFilter {
+    export class AddPrefixFilter {
      
         static $inject: string[] = ["$sce"];
        
         static filter($sce: ng.ISCEService) {
-            return (value, param1, param2)=> {
-                return value + "TEST";
+            return (value, text) => {
+                return text + ' ' + value;
             }
         }
       
@@ -20,7 +20,7 @@
         private static _module: ng.IModule;
 
         /**
-        * Stellt die Angular Module für ThousandDividerFilter bereit.
+        * Stellt die Angular Module für AddPrefixFilter bereit.
         */
         public static get module(): ng.IModule {
             if (this._module) {
@@ -28,8 +28,8 @@
             }
 
             //Hier die abhängigen Module für unsere Direktive definieren.
-            this._module = angular.module('thousandDivider', []);
-            this._module.filter('thousandDivider', App.Filter.ThousandDividerFilter.filter);
+            this._module = angular.module('addPrefix', []);
+            this._module.filter('addPrefix', App.Filter.AddPrefixFilter.filter);
             return this._module;
         }
         //#endregion

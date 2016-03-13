@@ -33,7 +33,7 @@
                 <tbody ng-if="ctrl.locals.persons.length > 0">
                     <tr ng-repeat="row in ctrl.locals.persons">
                         <td ng-bind="row.id"></td>
-                        <td ng-bind="row.name | thousandDivider"></td>
+                        <td ng-bind="row.name | addPrefix:'**'"></td>
                         <td ng-bind="row.age"></td>
                         <td>
                             <a ng-click="ctrl.editPerson(row.id)" class="btn btn-default btn-xs" title="Person bearbeiten">EDIT</a>

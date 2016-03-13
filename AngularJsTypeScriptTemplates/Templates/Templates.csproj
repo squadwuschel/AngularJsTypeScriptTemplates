@@ -170,7 +170,7 @@
     </TypeScriptCompile>
     <TypeScriptCompile Include="Templates\directives\controllerAsDirective.ts" />
     <TypeScriptCompile Include="Templates\directives\scopeDirective.ts" />
-    <TypeScriptCompile Include="Templates\filter\thousandDividerFilter.ts" />
+    <TypeScriptCompile Include="Templates\filter\addPrefixFilter.ts" />
     <TypeScriptCompile Include="Templates\mainApp.ts" />
     <TypeScriptCompile Include="Templates\routeConfig.ts" />
     <TypeScriptCompile Include="Templates\services\modalService.ts" />

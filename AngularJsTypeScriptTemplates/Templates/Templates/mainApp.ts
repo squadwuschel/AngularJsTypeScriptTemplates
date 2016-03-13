@@ -13,7 +13,7 @@
                 App.Services.ModalService.module.name,
                 App.Directives.CtrlAsDirectiveName.module.name,
                 App.Directives.DirectiveName.module.name,
-                App.Filter.ThousandDividerFilter.module.name,
+                App.Filter.AddPrefixFilter.module.name,
             ])
             .config([
                 "$stateProvider", "$urlRouterProvider", "$locationProvider", ($stateProvider: ng.ui.IStateProvider, $urlRouterProvider: ng.ui.IUrlRouterProvider, $locationProvider: ng.ILocationProvider) => {
