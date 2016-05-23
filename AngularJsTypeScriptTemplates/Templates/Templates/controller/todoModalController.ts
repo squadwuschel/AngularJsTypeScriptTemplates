@@ -14,7 +14,7 @@
         frm: ng.IFormController;
         //Injection für den Konstruktor - Achtung Reihenfolge wichtig!
         static $inject: string[] = [
-            "$modalInstance",
+            "$uibModalInstance",
             Services.TodoService.module.name,
              "personId"
         ];

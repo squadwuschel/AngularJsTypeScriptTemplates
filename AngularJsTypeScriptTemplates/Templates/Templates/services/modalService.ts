@@ -13,9 +13,9 @@
      * http://www.ngroutes.com/questions/AUuAClOCa5vEqxqlK2UN/how-to-use-angular-ui-bootstrap-modals-in-typescript.html
      */
     export class ModalService implements IModalService {
-        static $inject : string[] = ['$modal', "$q"];
+        static $inject : string[] = ['$uibModal', "$q"];
 
-        constructor(private $modal: ng.ui.bootstrap.IModalService, private $q: ng.IQService) {}
+        constructor(private $uibModal: ng.ui.bootstrap.IModalService, private $q: ng.IQService) {}
 
         /**
          * Bearbeiten einer Person, dem die passende PersonId Übergeben wird und ein Modal zum Bearbeiten öffnet.
@@ -34,7 +34,7 @@
             };
 
             //Das Promise zurückgeben, damit man auf den Rückgabewert des Modals in der Anwendung entsprechend reagieren kann.
-            return this.$modal.open(options).result
+            return this.$uibModal.open(options).result
                 .then((updatedItem) => {
                     return updatedItem;
                 });

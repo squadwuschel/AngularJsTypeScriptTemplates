@@ -13,14 +13,14 @@
 	* Beschreibung
 	*
 	* Verwendung: 
-	*  
+	*  <div ctrl-as-directive-name sq-title="ctrl.name"></div>
 	*/
     export class CtrlAsDirectiveName implements ng.IDirective {
         public restrict: string = "A";
         public replcae: boolean = true;
         public require = "ngModel";
         //public templateUrl: string = siteRoot + 'ScriptsApp/directives/templates/CtrlAsDirectiveName.directives.html';
-        public template: string = '<a ng-click="ctrl.doSomethingBtnClick()" ng-class="btn btn-default" title="{{ctrl.sqTitle}}">Test</a>';
+        public template: string = '<a ng-click="ctrl.doSomethingBtnClick()" class="btn btn-default" title="{{ctrl.sqTitle}}">Test {{ctrl.sqTitle}}</a>';
         public scope = {}
 
         public controller = CtrlAsDirectiveNameCtrl;
