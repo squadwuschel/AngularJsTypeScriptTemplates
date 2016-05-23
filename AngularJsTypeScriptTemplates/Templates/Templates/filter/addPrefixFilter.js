@@ -34,8 +34,7 @@ var App;
             });
             AddPrefixFilter.$inject = ["$sce"];
             return AddPrefixFilter;
-        })();
+        }());
         Filter.AddPrefixFilter = AddPrefixFilter;
     })(Filter = App.Filter || (App.Filter = {}));
 })(App || (App = {}));
-//# sourceMappingURL=addPrefixFilter.js.map

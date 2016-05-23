@@ -120,6 +120,7 @@
     <Content Include="Scripts\jquery-1.11.3.min.js" />
     <Content Include="Scripts\jquery-1.11.3.min.map" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Templates\components\editUser.template.html" />
     <Content Include="Views\web.config" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -165,6 +166,7 @@
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\ui-router-extras\ui-router-extras.d.ts" />
+    <TypeScriptCompile Include="Templates\components\editUser.component.ts" />
     <TypeScriptCompile Include="Templates\controller\todoController.ts" />
     <TypeScriptCompile Include="Templates\controller\todoModalController.ts">
       <SubType>Code</SubType>

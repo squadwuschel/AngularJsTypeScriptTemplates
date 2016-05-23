@@ -43,7 +43,7 @@ var App;
                 App.Services.ModalService.module.name,
             ];
             return TodoCtrl;
-        })();
+        }());
         Controller.TodoCtrl = TodoCtrl;
         var CtrlNameLocalsModel = (function () {
             function CtrlNameLocalsModel() {
@@ -51,7 +51,6 @@ var App;
                 this.name = "SquadWuschel";
             }
             return CtrlNameLocalsModel;
-        })();
+        }());
     })(Controller = App.Controller || (App.Controller = {}));
 })(App || (App = {}));
-//# sourceMappingURL=todoController.js.map

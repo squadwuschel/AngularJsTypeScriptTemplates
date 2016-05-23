@@ -53,8 +53,7 @@ var App;
             });
             ModalService.$inject = ['$uibModal', "$q"];
             return ModalService;
-        })();
+        }());
         Services.ModalService = ModalService;
     })(Services = App.Services || (App.Services = {}));
 })(App || (App = {}));
-//# sourceMappingURL=modalService.js.map

@@ -29,8 +29,7 @@ var App;
                 });
             };
             return RouteConfig;
-        })();
+        }());
         Config.RouteConfig = RouteConfig;
     })(Config = App.Config || (App.Config = {}));
 })(App || (App = {}));
-//# sourceMappingURL=routeConfig.js.map

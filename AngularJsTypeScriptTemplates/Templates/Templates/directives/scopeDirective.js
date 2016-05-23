@@ -47,8 +47,7 @@ var App;
                 configurable: true
             });
             return DirectiveName;
-        })();
+        }());
         Directives.DirectiveName = DirectiveName;
     })(Directives = App.Directives || (App.Directives = {}));
 })(App || (App = {}));
-//# sourceMappingURL=scopeDirective.js.map

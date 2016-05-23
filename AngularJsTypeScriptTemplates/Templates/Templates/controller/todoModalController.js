@@ -61,7 +61,7 @@ var App;
                 "personId"
             ];
             return TodoModalCtrl;
-        })();
+        }());
         Controller.TodoModalCtrl = TodoModalCtrl;
         var MyLocalsModel = (function () {
             function MyLocalsModel() {
@@ -71,7 +71,6 @@ var App;
                 this.errorMessage = "Es ist ein Fehler aufgetreten";
             }
             return MyLocalsModel;
-        })();
+        }());
     })(Controller = App.Controller || (App.Controller = {}));
 })(App || (App = {}));
-//# sourceMappingURL=todoModalController.js.map

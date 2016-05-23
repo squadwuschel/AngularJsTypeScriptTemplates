@@ -17,6 +17,7 @@ var App;
                 App.Directives.CtrlAsDirectiveName.module.name,
                 App.Directives.DirectiveName.module.name,
                 App.Filter.AddPrefixFilter.module.name,
+                App.Components.EditUserCmp.module.name,
             ])
                 .config([
                 "$stateProvider", "$urlRouterProvider", "$locationProvider", function ($stateProvider, $urlRouterProvider, $locationProvider) {
@@ -25,7 +26,7 @@ var App;
             ]);
         };
         return MainApp;
-    })();
+    }());
     App.MainApp = MainApp;
 })(App || (App = {}));
 //Unsere Anwendung intial aufrufen/starten
@@ -37,4 +38,3 @@ App.MainApp.createApp(angular);
 //der passenden Reihenfolge damit TS weiß welche Datei von welcher abhängt und alle in der richtigen Reihenfolge compiliert werden
 //und damit am Ende auch alle Abhängigkeiten gefunden werden. - ACHTUNG ich hatte hier einige Probleme mit der richtigen Reihenfolge, daher
 //verwende ich die Bundles von .NET 
-//# sourceMappingURL=mainApp.js.map

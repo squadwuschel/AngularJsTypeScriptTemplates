@@ -14,6 +14,7 @@
                 App.Directives.CtrlAsDirectiveName.module.name,
                 App.Directives.DirectiveName.module.name,
                 App.Filter.AddPrefixFilter.module.name,
+                App.Components.EditUserCmp.module.name,
             ])
             .config([
                 "$stateProvider", "$urlRouterProvider", "$locationProvider", ($stateProvider: ng.ui.IStateProvider, $urlRouterProvider: ng.ui.IUrlRouterProvider, $locationProvider: ng.ILocationProvider) => {

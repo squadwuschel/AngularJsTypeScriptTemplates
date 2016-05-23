@@ -42,8 +42,7 @@ var App;
             });
             TodoService.$inject = [];
             return TodoService;
-        })();
+        }());
         Services.TodoService = TodoService;
     })(Services = App.Services || (App.Services = {}));
 })(App || (App = {}));
-//# sourceMappingURL=todoService.js.map

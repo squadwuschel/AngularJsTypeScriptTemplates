@@ -7,7 +7,6 @@ var App;
             this.id = id;
         }
         return Person;
-    })();
+    }());
     App.Person = Person;
 })(App || (App = {}));
-//# sourceMappingURL=person.js.map

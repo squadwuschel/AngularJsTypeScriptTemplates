@@ -45,7 +45,7 @@ var App;
                 configurable: true
             });
             return CtrlAsDirectiveName;
-        })();
+        }());
         Directives.CtrlAsDirectiveName = CtrlAsDirectiveName;
         /*
         * Implementierung unseres CtrlAsDirectiveName Controllers.
@@ -64,8 +64,7 @@ var App;
             };
             CtrlAsDirectiveNameCtrl.$inject = [];
             return CtrlAsDirectiveNameCtrl;
-        })();
+        }());
         Directives.CtrlAsDirectiveNameCtrl = CtrlAsDirectiveNameCtrl;
     })(Directives = App.Directives || (App.Directives = {}));
 })(App || (App = {}));
-//# sourceMappingURL=controllerAsDirective.js.map

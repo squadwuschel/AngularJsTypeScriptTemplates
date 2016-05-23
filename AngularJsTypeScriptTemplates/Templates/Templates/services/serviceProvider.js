@@ -35,8 +35,7 @@ var App;
                 configurable: true
             });
             return ProviderNameServiceProvider;
-        })();
+        }());
         Services.ProviderNameServiceProvider = ProviderNameServiceProvider;
     })(Services = App.Services || (App.Services = {}));
 })(App || (App = {}));
-//# sourceMappingURL=serviceProvider.js.map
