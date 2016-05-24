@@ -31,8 +31,9 @@
         }
 
         public editPerson(personId: number): void {
-            this.modalService.editPerson(personId).then(() => {
+            this.modalService.editPerson(personId).then((data) => {
                //Do Something nachdem das Modal geschlossen wurde.
+                console.log(data);
             });
         }
 

@@ -17,8 +17,9 @@ var App;
                 this.locals.persons = this.todoService.getPersonList();
             };
             TodoCtrl.prototype.editPerson = function (personId) {
-                this.modalService.editPerson(personId).then(function () {
+                this.modalService.editPerson(personId).then(function (data) {
                     //Do Something nachdem das Modal geschlossen wurde.
+                    console.log(data);
                 });
             };
             Object.defineProperty(TodoCtrl, "module", {

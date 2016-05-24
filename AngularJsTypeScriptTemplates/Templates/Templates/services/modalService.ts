@@ -24,8 +24,9 @@
         public editPerson(personId: Number): ng.IPromise<string> {
             var options: ng.ui.bootstrap.IModalSettings = {
                 templateUrl: '/Todo/TodoEditModal',
-                //Controller As Syntax für Modal Controller
-                controller: App.Controller.TodoModalCtrl.module.name + ' as ctrl',
+                bindToController : true,
+                controller: App.Controller.TodoModalCtrl.module.name,
+                controllerAs : 'ctrl',
                 size: 'lg',
                 backdrop: "static",
                 resolve: {

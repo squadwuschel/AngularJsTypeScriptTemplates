@@ -44,7 +44,7 @@
 
             if (this.frm.$valid) {
                //SaveChanges and Close
-               this.$modalInstance.close();
+               this.$modalInstance.close({ Typ:  "Modal geschlossen!", test: this.personId });
             } else {
                 this.locals.isSaving = false;
             }

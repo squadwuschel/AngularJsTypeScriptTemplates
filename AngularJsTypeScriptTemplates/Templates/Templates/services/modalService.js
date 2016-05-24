@@ -20,8 +20,9 @@ var App;
             ModalService.prototype.editPerson = function (personId) {
                 var options = {
                     templateUrl: '/Todo/TodoEditModal',
-                    //Controller As Syntax für Modal Controller
-                    controller: App.Controller.TodoModalCtrl.module.name + ' as ctrl',
+                    bindToController: true,
+                    controller: App.Controller.TodoModalCtrl.module.name,
+                    controllerAs: 'ctrl',
                     size: 'lg',
                     backdrop: "static",
                     resolve: {
