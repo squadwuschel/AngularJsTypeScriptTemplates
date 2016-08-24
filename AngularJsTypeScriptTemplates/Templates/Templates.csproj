@@ -25,7 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TypeScriptToolsVersion>1.7</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -174,6 +174,7 @@
     <TypeScriptCompile Include="Templates\directives\controllerAsDirective.ts" />
     <TypeScriptCompile Include="Templates\directives\scopeDirective.ts" />
     <TypeScriptCompile Include="Templates\filter\addPrefixFilter.ts" />
+    <TypeScriptCompile Include="Templates\interceptors\consoleInterceptor.ts" />
     <TypeScriptCompile Include="Templates\mainApp.ts" />
     <TypeScriptCompile Include="Templates\routeConfig.ts" />
     <TypeScriptCompile Include="Templates\services\modalService.ts" />

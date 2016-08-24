@@ -18,6 +18,7 @@ var App;
                 App.Directives.DirectiveName.module.name,
                 App.Filter.AddPrefixFilter.module.name,
                 App.Components.EditUserCmp.module.name,
+                App.AppComponents.Interceptors.ConsoleInterceptor.module.name,
             ])
                 .config([
                 "$stateProvider", "$urlRouterProvider", "$locationProvider", function ($stateProvider, $urlRouterProvider, $locationProvider) {
